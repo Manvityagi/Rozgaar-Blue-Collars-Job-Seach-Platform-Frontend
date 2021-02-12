@@ -40,6 +40,18 @@ $ npm start
 
 ## Workflow
 
+I have identified 9 categories of job-seekers to make the platform more intuitive and simple.
+
+- Electrician
+- Plumber
+- Labour
+- Driver
+- Maid
+- Security guard
+- Cook
+- Peon
+- Mechanic
+
 #### For Job Seeker
 
 1. Register
