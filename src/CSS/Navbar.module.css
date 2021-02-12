@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.NavBar {
+  margin: 0 0;
+  background-color: white !important;
+}
+
+.NavBar a {
+  color: black !important;
+  letter-spacing: 0px;
+  font-weight: 500;
+  font-size: 17px;
+  margin: auto 8px;
+}
+
+.Brand:hover {
+  border: none; 
+  text-decoration: none;
+}
+
+.navbar-default {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+
+.Logo {
+  letter-spacing: 0px;
+  font-size: 2.3rem;
+  font-weight: 390;
+  font-family: "Poppins", sans-serif;
+  padding-left: 20px;
+}
+
+a:hover,
+a:active,
+a:global(.active) {
+  cursor: pointer;
+  border-bottom: 2px solid #008dc8;
+}
+
+.NoUnderline:hover{
+  text-decoration: none;
+}
+
+.Middle {
+  margin-left: 480px;
+}
+
+.Search {
+  border-radius: 8px 0px 0px 8px;
+}
+
+.SearchButton {
+  background-color: #008dc8;
+  border: none;
+  color: white;
+  padding: 4px 10px 4px 10px;
+  border-radius: 0px 8px 8px 0px;
+  font-size: 20px;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.Title {
+  color: white;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  margin-left: 8px;
+  margin-right: 58px;
+}
+
+.Dropdown {
+  background-color: #008dc8;
+  border: none;
+  color: #fff;
+  margin-left: 390%;
+  font-family: "Inter", sans-serif;
+  border-radius: 10px 10px 0px 0px;
+  font-size: 20px;
+  transition: all 0.5s;
+  cursor: pointer;
+  float: right;
+  width: 256px;
+}
+
+.Button {
+  background-color: #008dc8;
+  border: none;
+  color: #fff;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 16px;
+  padding: 5px 20px 5px 20px;
+  margin-right: 10%;
+  position: relative;
+  float: right;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+}
+
+.Button:hover {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+@media (max-width: 360px) {
+  .Logo {
+    position: relative;
+    left: -20px;
+    font-size: 2rem;
+  }
+  button {
+    position: absolute;
+    top: 16px;
+    right: 0;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1270px){
+  .Middle {
+    margin-left: 0px;
+  }  
+  .ShiftRight {
+    margin-left: 0px;
+  }
+  .Dropdown {
+    margin-left: 290%;
+    margin-top: 10px;
+  }
+  .Button {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1200px){
+  .Dropdown {
+    margin-left: 265%;
+  }
+}
+
+@media (max-width: 1150px){
+  .Dropdown {
+    margin-left: 250%;
+  }
+}
+
+@media (max-width: 1100px){
+  .Dropdown {
+    margin-left: 230%;
+  }
+}
+
+@media (max-width: 1050px){
+  .Dropdown {
+    margin-left: 210%;
+  }
+}

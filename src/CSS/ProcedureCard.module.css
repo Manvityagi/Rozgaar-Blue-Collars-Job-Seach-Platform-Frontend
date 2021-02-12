@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.Box {
+    margin: 1%;
+}
+
+.Card {
+    width: 200px;
+    border-radius: 5%;
+    box-shadow: 0px 3px 4px 0px #ccc;
+}
+
+.Title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CardTitle {
+    font-size: 23px;
+    text-align: center;
+    color: black;
+    font-family: "Poppins", sans-serif;
+}
+
+.CardImage {
+    margin-left: 15%;
+    height: 100px;
+    width: 120px;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+@media (min-width: 300px) and (max-width: 531px) {
+    .Box {
+        width: 100%;
+    }
+}

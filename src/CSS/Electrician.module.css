@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.Box {
+    margin: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Card {
+    width: 800px;
+    height: 350px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 2px 0px #ccc;
+}
+.CardTitle {
+    font-size: 23px;
+    text-align: left;
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+}
+.CardImage {
+    height: 100px;
+    width: 120px;
+    padding: 20px;
+    margin-left: 20px;
+    padding-bottom: 0px;
+}
+
+.Background {
+  margin-top: 5%;
+  background-color: #BD6997;
+}
+.Opportunity {
+  color: #fff;
+  padding: 3%;
+  padding-bottom: 3%;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+.Rectangle {
+  height: 3px;
+  width: 155px;
+  background-color: #008dc8;
+  margin-bottom: 20px;
+}
+.Title {
+  margin-top: 35px;
+  margin-left: 15px;
+  color:  #008dc8;
+  font-size: 35px;
+  font-family: "Poppins", sans-serif;
+}
+.Title2 {
+  margin-top: 0px;
+  margin-left: 15px;
+  color: "blue";
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+}
+.Description {
+  margin-top: 15px;
+  margin-left: 35px;
+  margin-right: 25px;
+  font-family: "Inter", sans-serif;
+}
+.Heading {
+  margin-top: 7px;
+  margin-left: 0px;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+.Spinner {
+  font-size: 1rem;
+}
+.Value {
+  margin-top: 7px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 18px;
+  color: black;
+  font-family: "Inter", sans-serif;
+}
+.shiftRight {
+  float: right;
+}
+.Button {
+    background-color: #008dc8;
+    border: none;
+    color: #fff;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 5px 30px 5px 30px;
+    margin-top: 8px;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    box-shadow: 0 5px 10px -8px rgba(0, 0, 0, 0.7);
+    align-self: center;
+}
+.Button:hover{
+  background-color: #008dc8;
+  padding-right: 35px;
+  padding-left: 35px;
+}
+.Button::after{
+  content: attr(data-active);
+}
+.Button:hover::after{
+  content: attr(data-hover);
+}
+a:hover{
+  border-bottom: none;
+}
+.BannerImage {
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+@media (max-width: 1000px) {
+  .Opportunity {
+    padding: 6%;
+    padding-bottom: 3%;
+  }
+}
+
+
+@media (max-width: 765px) {
+  .Opportunity {
+    padding: 15%;
+    padding-bottom: 3%;
+  }
+}
+
+@media (max-width: 600px) {
+  .Opportunity {
+    padding: 15%;
+    padding-bottom: 3%;
+  }
+}
+
+@media (max-width: 500px) {
+  .Opportunity {
+    padding-top: 25%;
+    padding-bottom: 10%;
+  }
+  .CardImage {
+    display: none;
+  }
+}
+

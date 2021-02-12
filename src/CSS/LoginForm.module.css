@@ -1,0 +1,68 @@
+.Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Title {
+    font-size: 2rem;
+    font-weight: 50px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    /* border-bottom: #008dc8 solid 3px; */
+}
+
+.Underline {
+    height: 2px;
+    width: 100px;
+    margin-top: -5%;
+    margin-left: 31.5%;
+    background-color: #008dc8;
+}
+
+.Form {
+    width: 20rem;
+    height: 30rem;
+    border: lightgray solid 2px;
+    padding: 3%;
+    padding-top: 8%;
+    border-radius: 5%;
+    align-items: center;
+}
+
+.Input{
+    margin-top: 10%;
+}
+
+.Button{
+    background-color: #008dc8;
+    border: none;
+    color: #fff;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 5px 20px 5px 20px;
+    margin-top: 20px;
+    margin-left: 35%;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+}
+
+.Button:hover {
+    background-color: #008dc8;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.SignUp {
+    margin-top: 8%;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    color: #008dc8;
+}
