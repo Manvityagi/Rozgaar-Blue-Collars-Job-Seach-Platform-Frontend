@@ -6,6 +6,10 @@
 
 - Make a job-search platofrm for Blue Collar Workers.
 
+## [VIEW LIVE DEMO](https://practical-jepsen-534aed.netlify.app/)
+
+**Note** : SMS can be sent to only Twilio verified numbers as I am not using the paid service.
+
 ## 🚧 Technology Stack
 
 - **Server Enviornment** - NodeJS
@@ -23,15 +27,13 @@
 
 ```
 # clone the repository to your local machine
-$ git clone `git clone https://github.com/<YOUR-GITHUB-USERNAME>/Rozgaar-Blue-Collars-Job-Seach-Platform-Backend.git`
+$ git clone `git clone https://github.com/<YOUR-GITHUB-USERNAME>/Rozgaar-Blue-Collars-Job-Seach-Platform-Frontend.git`
 
 # navigate to the project's directory and install all the relevant dev-dependencies
-$ cd Rozgaar-Blue-Collars-Job-Seach-Platform-Backend && npm intsall
-
-# Make a .env file and include the details as per config.js
+$ cd Rozgaar-Blue-Collars-Job-Seach-Platform-Frontend && npm intsall
 
 # Start application
-$ node index.js
+$ npm start
 
 # Make requests on http://localhost:3030/ from Postman
 ```
@@ -44,7 +46,7 @@ $ node index.js
 2. Update Profile
 3. Apply on jobs - just by clicking - as simple as that.
 4. The applicant gets an SMS on his/her phone number after applying to a job.
-   ![SMS TO APPLICANT](https://github.com/Manvityagi/Rozgaar-Blue-Collars-Job-Seach-Platform-Backend/raw/main/assets/msgToApplicant.jpg)
+   ![SMS TO APPLICANT](https://github.com/Manvityagi/Rozgaar-Blue-Collars-Job-Seach-Platform-Frontend/raw/main/assets/msgToApplicant.jpg)
 
 #### For Job Poster
 
@@ -53,7 +55,7 @@ $ node index.js
 3. **Ease the flow** for both parties
    - Job Seekers Profiles will be available all throughout, Recruiters can directly see their profiles and give them a message/call
 4. Job Poster gets an email when someone applies on a job posted by him/her.
-   ![MAIL TO RECRUITER](https://github.com/Manvityagi/Rozgaar-Blue-Collars-Job-Seach-Platform-Backend/raw/main/assets/recruiterMail.PNG)
+   ![MAIL TO RECRUITER](https://github.com/Manvityagi/Rozgaar-Blue-Collars-Job-Seach-Platform-Frontend/raw/main/assets/recruiterMail.PNG)
 
 #### Problems in Existing Solutions
 
