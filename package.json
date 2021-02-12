@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "author": "vaishali thakur",
+  "author": "",
   "eslintConfig": {
     "extends": "react-app"
   },
