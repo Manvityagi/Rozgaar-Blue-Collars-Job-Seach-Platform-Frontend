@@ -4,10 +4,7 @@ import styles from "../../CSS/Electrician.module.css";
 import Moment from "react-moment";
 
 function CandidateCard(props) {
-  const [isOpen, setIsOpen] = useState(false);
-
   const { item } = props;
-
   return (
     <div id="fulltime" className={styles.Box}>
       <Card style={{ width: "80rem", borderRadius: "10px" }}>
