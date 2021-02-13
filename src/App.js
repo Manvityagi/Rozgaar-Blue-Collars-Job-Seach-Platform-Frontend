@@ -1,223 +1,215 @@
-import React from 'react';
+import React from "react";
 
-import UserProfile from "./Components/UserProfile/Sections/UserProfile/UserProfile"
+import UserProfile from "./Components/UserProfile/Sections/UserProfile/UserProfile";
 
-import HomePage from "./Components/HomePage/HomePage"
+import HomePage from "./Components/HomePage/HomePage";
 
-import Electrician from "./Components/ViewOpportunity/Sections/Electrician/Electrician"
-import Plumber from "./Components/ViewOpportunity/Sections/Plumber/Plumber"
-import Mechanic from "./Components/ViewOpportunity/Sections/Mechanic/Mechanic"
-import Cook from "./Components/ViewOpportunity/Sections/Cook/Cook"
-import Peon from "./Components/ViewOpportunity/Sections/Peon/Peon"
-import Driver from "./Components/ViewOpportunity/Sections/Driver/Driver"
-import HouseKeeping from "./Components/ViewOpportunity/Sections/HouseKeeping/HouseKeeping"
-import SiteWorkers from "./Components/ViewOpportunity/Sections/SiteWorkers/SiteWorkers"
-import SecurityGuard from "./Components/ViewOpportunity/Sections/SecurityGuard/SecurityGuard"
+import PostJob from "./Components/PostOpportunity/Sections/PostJob/PostJob";
 
-import PostJob from "./Components/PostOpportunity/Sections/PostJob/PostJob"
+import CandidateElectrician from "./Components/ViewCandidates/Sections/Electrician/Electrician";
+import CandidatePlumber from "./Components/ViewCandidates/Sections/Plumber/Plumber";
+import CandidateMechanic from "./Components/ViewCandidates/Sections/Mechanic/Mechanic";
+import CandidateCook from "./Components/ViewCandidates/Sections/Cook/Cook";
+import CandidatePeon from "./Components/ViewCandidates/Sections/Peon/Peon";
+import CandidateDriver from "./Components/ViewCandidates/Sections/Driver/Driver";
+import CandidateHouseKeeping from "./Components/ViewCandidates/Sections/HouseKeeping/HouseKeeping";
+import CandidateSiteWorkers from "./Components/ViewCandidates/Sections/SiteWorkers/SiteWorkers";
+import CandidateSecurityGuard from "./Components/ViewCandidates/Sections/SecurityGuard/SecurityGuard";
 
-import CandidateElectrician from "./Components/ViewCandidates/Sections/Electrician/Electrician"
-import CandidatePlumber from "./Components/ViewCandidates/Sections/Plumber/Plumber"
-import CandidateMechanic from "./Components/ViewCandidates/Sections/Mechanic/Mechanic"
-import CandidateCook from "./Components/ViewCandidates/Sections/Cook/Cook"
-import CandidatePeon from "./Components/ViewCandidates/Sections/Peon/Peon"
-import CandidateDriver from "./Components/ViewCandidates/Sections/Driver/Driver"
-import CandidateHouseKeeping from "./Components/ViewCandidates/Sections/HouseKeeping/HouseKeeping"
-import CandidateSiteWorkers from "./Components/ViewCandidates/Sections/SiteWorkers/SiteWorkers"
-import CandidateSecurityGuard from "./Components/ViewCandidates/Sections/SecurityGuard/SecurityGuard"
-
-import Footer from "./Components/Footer/Footer"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Footer from "./Components/Footer/Footer";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Opportunity } from "./Components/ViewOpportunity/Opportunity";
 
 function App() {
   return (
     <Router>
-      <div className = "App">
+      <div className="App">
         <Switch>
-          <Route 
+          <Route
             exact
-            path = "/"
-            render = {(props) => (
+            path="/"
+            render={(props) => (
               <div>
                 <HomePage />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/user/register"
-            render = {(props) => (
+            path="/user/register"
+            render={(props) => (
               <div>
                 <UserProfile />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/jobs/electrician"
-            render = {(props) => (
+            path="/jobs/electrician"
+            render={(props) => (
               <div>
-                <Electrician />
+                <Opportunity category="ELECTRICIAN" />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/jobs/plumber"
-            render = {(props) => (
+            path="/jobs/plumber"
+            render={(props) => (
               <div>
-                <Plumber />
+                {/****************    Passing category as props *******************/}
+                <Opportunity category="PLUMBER" />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/jobs/mechanic"
-            render = {(props) => (
+            path="/jobs/mechanic"
+            render={(props) => (
               <div>
-                <Mechanic />
+                <Opportunity category="MECHANIC" />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/jobs/cooking"
-            render = {(props) => (
+            path="/jobs/cooking"
+            render={(props) => (
               <div>
-                <Cook />
+                <Opportunity category="COOK" />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/jobs/peon"
-            render = {(props) => (
+            path="/jobs/peon"
+            render={(props) => (
               <div>
-                <Peon />
+                <Opportunity category="PEON" />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/jobs/driver"
-            render = {(props) => (
+            path="/jobs/driver"
+            render={(props) => (
               <div>
-                <Driver />
+                <Opportunity category="DRIVER" />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/jobs/housekeeping"
-            render = {(props) => (
+            path="/jobs/housekeeping"
+            render={(props) => (
               <div>
-                <HouseKeeping />
+                <Opportunity category="MAID" />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/jobs/siteworkers"
-            render = {(props) => (
+            path="/jobs/siteworkers"
+            render={(props) => (
               <div>
-                <SiteWorkers />
+                <Opportunity category="LABOUR" />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/jobs/securityguard"
-            render = {(props) => (
+            path="/jobs/securityguard"
+            render={(props) => (
               <div>
-                <SecurityGuard />
+                <Opportunity category="SECURITY GUARD" />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/jobs/post"
-            render = {(props) => (
+            path="/jobs/post"
+            render={(props) => (
               <div>
                 <PostJob />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/candidates/electrician"
-            render = {(props) => (
+            path="/candidates/electrician"
+            render={(props) => (
               <div>
                 <CandidateElectrician />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/candidates/plumber"
-            render = {(props) => (
+            path="/candidates/plumber"
+            render={(props) => (
               <div>
                 <CandidatePlumber />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/candidates/mechanic"
-            render = {(props) => (
+            path="/candidates/mechanic"
+            render={(props) => (
               <div>
                 <CandidateMechanic />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/candidates/cooking"
-            render = {(props) => (
+            path="/candidates/cooking"
+            render={(props) => (
               <div>
                 <CandidateCook />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/candidates/peon"
-            render = {(props) => (
+            path="/candidates/peon"
+            render={(props) => (
               <div>
                 <CandidatePeon />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/candidates/driver"
-            render = {(props) => (
+            path="/candidates/driver"
+            render={(props) => (
               <div>
                 <CandidateDriver />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/candidates/housekeeping"
-            render = {(props) => (
+            path="/candidates/housekeeping"
+            render={(props) => (
               <div>
                 <CandidateHouseKeeping />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/candidates/siteworkers"
-            render = {(props) => (
+            path="/candidates/siteworkers"
+            render={(props) => (
               <div>
                 <CandidateSiteWorkers />
               </div>
             )}
           />
-          <Route 
+          <Route
             exact
-            path = "/candidates/securityguard"
-            render = {(props) => (
+            path="/candidates/securityguard"
+            render={(props) => (
               <div>
                 <CandidateSecurityGuard />
               </div>

@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Navbar from "../Navbar";
+import Navbar from "./Sections/Navbar";
 import { Container, Jumbotron, Spinner } from "react-bootstrap";
-import MechanicCard from "./MechanicCard";
-import Header from "../Header";
-import styles from "../../../../CSS/Electrician.module.css";
+import { OpportunityCard } from "./Card";
+import Header from "./Sections/Header";
+import styles from "../../CSS/Electrician.module.css";
 import axios from "axios";
 
-class Mechanic extends Component {
+class Opportunity extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,7 +16,9 @@ class Mechanic extends Component {
 
   componentDidMount() {
     axios
-      .get("https://pacific-taiga-02637.herokuapp.com/jobs/?CATEGORY=MECHANIC")
+      .get(
+        `https://pacific-taiga-02637.herokuapp.com/jobs/?CATEGORY=${this.props.category}`
+      )
       .then(
         (res) => {
           const data = res.data;
@@ -36,7 +38,7 @@ class Mechanic extends Component {
       return (
         <div>
           <Navbar />
-          <Header title="Mechanic"/>
+          <Header title={this.props.category} />
           <h3
             style={{
               textAlign: "center",
@@ -44,7 +46,7 @@ class Mechanic extends Component {
               marginBottom: "200px",
             }}
           >
-            <Spinner animation="border" className = {styles.Spinner}/>
+            <Spinner animation="border" className={styles.Spinner} />
             {/* No opportunities, sorry! */}
           </h3>
         </div>
@@ -55,11 +57,11 @@ class Mechanic extends Component {
       <div>
         <Navbar />
         <div>
-          <Header title="Mechanic"/>
+          <Header title={this.props.category} />
           <Jumbotron style={{ backgroundColor: "white" }}>
             <Container className={styles.Cards}>
               {data.jobs.map((item) => {
-                return <MechanicCard key={item.id} item={item} />;
+                return <OpportunityCard key={item.id} item={item} />;
               })}
             </Container>
           </Jumbotron>
@@ -69,4 +71,4 @@ class Mechanic extends Component {
   }
 }
 
-export default Mechanic;
+export { Opportunity };

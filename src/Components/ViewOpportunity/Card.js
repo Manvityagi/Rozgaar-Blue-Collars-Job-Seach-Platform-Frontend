@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import { BiRupee } from "react-icons/bi";
-import styles from "../../../../CSS/Electrician.module.css";
-import ApplyJob from "../../../ApplyJob/ApplyJob";
+import styles from "../../CSS/Electrician.module.css";
+import ApplyJob from "../ApplyJob/ApplyJob";
 
-function DriverCard(props) {
+function OpportunityCard(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   const togglePopup = () => {
@@ -29,7 +29,7 @@ function DriverCard(props) {
               className={styles.CardImage}
             />
             <Col>
-              <h1 className={styles.Title}>Posted by - {item.title}</h1>
+              <h1 className={styles.Title}>{item.title}</h1>
             </Col>
           </Row>
           <Row>
@@ -97,4 +97,4 @@ function DriverCard(props) {
   );
 }
 
-export default DriverCard;
+export { OpportunityCard };
