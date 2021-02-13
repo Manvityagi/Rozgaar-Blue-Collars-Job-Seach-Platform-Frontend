@@ -1,16 +1,10 @@
 import React, { useState } from "react";
 import { Card, Row, Col, Container } from "react-bootstrap";
-import { BiRupee } from "react-icons/bi";
 import styles from "../../CSS/Electrician.module.css";
-import ApplyJob from "../ApplyJob/ApplyJob";
 import Moment from "react-moment";
 
 function CandidateCard(props) {
   const [isOpen, setIsOpen] = useState(false);
-
-  const togglePopup = () => {
-    setIsOpen(!isOpen);
-  };
 
   const { item } = props;
 
