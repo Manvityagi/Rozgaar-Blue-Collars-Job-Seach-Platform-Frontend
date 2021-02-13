@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card, Row, Col, Container } from "react-bootstrap";
+import { BiRupee } from "react-icons/bi";
+import styles from "../../CSS/Electrician.module.css";
+import ApplyJob from "../ApplyJob/ApplyJob";
 import Moment from "react-moment";
-import styles from "../../../../CSS/Electrician.module.css";
 
-function CookCard(props) {
+function CandidateCard(props) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopup = () => {
+    setIsOpen(!isOpen);
+  };
+
   const { item } = props;
 
   return (
@@ -17,6 +25,7 @@ function CookCard(props) {
             <Card.Img
               variant="top"
               src="https://ui-avatars.com/api/?background=bd6997&color=fff&name=Roz+Gaar&font-size=0.5&rounded=true"
+              // src = {item.image}
               alt={item.company}
               className={styles.CardImage}
             />
@@ -32,18 +41,25 @@ function CookCard(props) {
               <Col md={6} lg={6}>
                 <Row>
                   <h5 className={styles.Heading} style={{ marginLeft: "20px" }}>
-                    Current Location :
+                    Current Location:
                   </h5>
-                  <h5 className={styles.Value}>{item.currentLocation}</h5>
+                  <h5 className={styles.Value}>{item.location}</h5>
                 </Row>
               </Col>
 
               <Col md={6} lg={6}>
                 <Row>
-                  <h5 className={styles.Heading} style={{ marginLeft: "20px" }}>
-                    Year of Experience :
-                  </h5>
-                  <h5 className={styles.Value}>{item.YOE}</h5>
+                  <Container>
+                    <h5
+                      className={styles.Heading}
+                      style={{ marginLeft: "4px" }}
+                    >
+                      Date of Availability :
+                      <span className={styles.Value}>
+                        <Moment format="YYYY/MM/DD">{item.availability}</Moment>
+                      </span>
+                    </h5>
+                  </Container>
                 </Row>
               </Col>
             </Row>
@@ -55,10 +71,8 @@ function CookCard(props) {
                       className={styles.Heading}
                       style={{ marginLeft: "4px" }}
                     >
-                      Date of Availability :
-                      <span className={styles.Value}>
-                        <Moment format="YYYY/MM/DD">{item.availability}</Moment>
-                      </span>
+                      Years of Experience:
+                      <span className={styles.Value}>{item.YOE}</span>
                     </h5>
                   </Container>
                 </Row>
@@ -83,4 +97,4 @@ function CookCard(props) {
   );
 }
 
-export default CookCard;
+export { CandidateCard };

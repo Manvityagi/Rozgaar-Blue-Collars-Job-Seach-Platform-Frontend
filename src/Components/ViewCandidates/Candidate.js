@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Navbar from "../Navbar";
+import Navbar from "./Sections/Navbar";
 import { Container, Jumbotron, Spinner } from "react-bootstrap";
-import PeonCard from "./PeonCard";
-import Header from "../Header";
-import styles from "../../../../CSS/Electrician.module.css";
+import { CandidateCard } from "./Card";
+import Header from "./Sections/Header";
+import styles from "../../CSS/Electrician.module.css";
 import axios from "axios";
 
-class Peon extends Component {
+class Candidate extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,7 +16,9 @@ class Peon extends Component {
 
   componentDidMount() {
     axios
-      .get("https://pacific-taiga-02637.herokuapp.com/jobs/candidates/?CATEGORY=PEON")
+      .get(
+        `https://pacific-taiga-02637.herokuapp.com/jobs/candidates/?CATEGORY=${this.props.category}`
+      )
       .then(
         (res) => {
           const data = res.data;
@@ -36,7 +38,7 @@ class Peon extends Component {
       return (
         <div>
           <Navbar />
-          <Header title="Peon" link="/jobs/post" />
+          <Header title={this.props.category} />
           <h3
             style={{
               textAlign: "center",
@@ -44,8 +46,8 @@ class Peon extends Component {
               marginBottom: "200px",
             }}
           >
-            <Spinner animation="border" className = {styles.Spinner}/>
-            {/* No Candidates, sorry! */}
+            <Spinner animation="border" className={styles.Spinner} />
+            {/* No opportunities, sorry! */}
           </h3>
         </div>
       );
@@ -55,11 +57,11 @@ class Peon extends Component {
       <div>
         <Navbar />
         <div>
-          <Header title="Peon" link="/jobs/post" />
+          <Header title={this.props.category} />
           <Jumbotron style={{ backgroundColor: "white" }}>
             <Container className={styles.Cards}>
               {data.candidates.map((item) => {
-                return <PeonCard key={item.id} item={item} />;
+                return <CandidateCard key={item.id} item={item} />;
               })}
             </Container>
           </Jumbotron>
@@ -69,4 +71,4 @@ class Peon extends Component {
   }
 }
 
-export default Peon;
+export { Candidate };

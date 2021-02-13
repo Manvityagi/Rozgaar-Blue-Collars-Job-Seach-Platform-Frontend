@@ -70,7 +70,7 @@ function OpportunityCard(props) {
                       Offered Salary :
                       <span className={styles.Value}>
                         <BiRupee style={{ fontSize: "1.3rem" }} />
-                        10,000 per month
+                        {item.offeredSalary} per month
                       </span>
                     </h5>
                   </Container>

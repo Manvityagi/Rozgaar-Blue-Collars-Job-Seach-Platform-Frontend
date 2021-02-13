@@ -6,19 +6,10 @@ import HomePage from "./Components/HomePage/HomePage";
 
 import PostJob from "./Components/PostOpportunity/Sections/PostJob/PostJob";
 
-import CandidateElectrician from "./Components/ViewCandidates/Sections/Electrician/Electrician";
-import CandidatePlumber from "./Components/ViewCandidates/Sections/Plumber/Plumber";
-import CandidateMechanic from "./Components/ViewCandidates/Sections/Mechanic/Mechanic";
-import CandidateCook from "./Components/ViewCandidates/Sections/Cook/Cook";
-import CandidatePeon from "./Components/ViewCandidates/Sections/Peon/Peon";
-import CandidateDriver from "./Components/ViewCandidates/Sections/Driver/Driver";
-import CandidateHouseKeeping from "./Components/ViewCandidates/Sections/HouseKeeping/HouseKeeping";
-import CandidateSiteWorkers from "./Components/ViewCandidates/Sections/SiteWorkers/SiteWorkers";
-import CandidateSecurityGuard from "./Components/ViewCandidates/Sections/SecurityGuard/SecurityGuard";
-
 import Footer from "./Components/Footer/Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Opportunity } from "./Components/ViewOpportunity/Opportunity";
+import { Candidate } from "./Components/ViewCandidates/Candidate";
 
 function App() {
   return (
@@ -139,7 +130,7 @@ function App() {
             path="/candidates/electrician"
             render={(props) => (
               <div>
-                <CandidateElectrician />
+                <Candidate category="ELECTRICIAN" />
               </div>
             )}
           />
@@ -148,7 +139,7 @@ function App() {
             path="/candidates/plumber"
             render={(props) => (
               <div>
-                <CandidatePlumber />
+                <Candidate category="PLUMBER" />
               </div>
             )}
           />
@@ -157,7 +148,7 @@ function App() {
             path="/candidates/mechanic"
             render={(props) => (
               <div>
-                <CandidateMechanic />
+                <Candidate category="MECHANIC" />
               </div>
             )}
           />
@@ -166,7 +157,7 @@ function App() {
             path="/candidates/cooking"
             render={(props) => (
               <div>
-                <CandidateCook />
+                <Candidate category="COOK" />
               </div>
             )}
           />
@@ -175,7 +166,7 @@ function App() {
             path="/candidates/peon"
             render={(props) => (
               <div>
-                <CandidatePeon />
+                <Candidate category="PEON" />
               </div>
             )}
           />
@@ -184,7 +175,7 @@ function App() {
             path="/candidates/driver"
             render={(props) => (
               <div>
-                <CandidateDriver />
+                <Candidate category="DRIVER" />
               </div>
             )}
           />
@@ -193,7 +184,7 @@ function App() {
             path="/candidates/housekeeping"
             render={(props) => (
               <div>
-                <CandidateHouseKeeping />
+                <Candidate category="MAID" />
               </div>
             )}
           />
@@ -202,7 +193,7 @@ function App() {
             path="/candidates/siteworkers"
             render={(props) => (
               <div>
-                <CandidateSiteWorkers />
+                <Candidate category="LABOUR" />
               </div>
             )}
           />
@@ -211,7 +202,7 @@ function App() {
             path="/candidates/securityguard"
             render={(props) => (
               <div>
-                <CandidateSecurityGuard />
+                <Candidate category="SECURITY GUARD" />
               </div>
             )}
           />
