@@ -1,11 +1,10 @@
 {
-    "name": "Opportunity Calendar",
-    "short_name": "Opportunity Calendar",
-    "icons": [     
-    ],
-    "start_url": "/",
-    "display": "standalone",
-    "orientation": "portrait",
-    "background_color": "#f0f2f5",
-    "theme_color": "#96f2d7"
+  "name": "RozGaar",
+  "short_name": "RozGaar",
+  "icons": [],
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f0f2f5",
+  "theme_color": "#96f2d7"
 }

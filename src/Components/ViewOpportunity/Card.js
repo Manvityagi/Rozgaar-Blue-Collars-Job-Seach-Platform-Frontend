@@ -53,7 +53,7 @@ function OpportunityCard(props) {
                       className={styles.Heading}
                       style={{ marginLeft: "4px" }}
                     >
-                      No. of Positions :<span className={styles.Value}>20</span>
+                      No. of Positions :<span className={styles.Value}>{item.numberOfPositions}</span>
                     </h5>
                   </Container>
                 </Row>
