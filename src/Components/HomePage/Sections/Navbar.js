@@ -5,32 +5,30 @@ import { Link } from "react-scroll";
 
 function navbar() {
   return (
-    <Navbar fixed = "top" bg = "light" expand = "lg" className = {styles.NavBar}>
-      <Navbar.Brand className = {styles.Logo}>
-        <a href = "/" className = {styles.Brand} style = {{fontSize: "35px"}}>
-          Roz 
-          <span style = {{ color: "#008dc8" }}>gaar </span> 
+    <Navbar fixed="top" bg="light" expand="lg" className={styles.NavBar}>
+      <Navbar.Brand className={styles.Logo}>
+        <a href="/" className={styles.Brand} style={{ fontSize: "35px" }}>
+          Roz
+          <span style={{ color: "#008dc8" }}>gaar </span>
         </a>
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls = "responsive-navbar-nav" />
-      <Navbar.Collapse id = "responsive-navbar-nav">
-        <Nav className = "ml-auto">
-          <Link active smooth = {true} duration = {1000} to = "home">
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="ml-auto">
+          <Link active smooth={true} duration={1000} to="home">
             Home
           </Link>
-          <Link smooth = {true} offset = {-90} duration = {1000} to = "categories">
+          <Link smooth={true} offset={-90} duration={1000} to="categories">
             Categories
           </Link>
-          <Link smooth = {true} offset = {-190} duration = {1000} to = "howwework">
+          <Link smooth={true} offset={-190} duration={1000} to="howwework">
             How We Work?
           </Link>
-          <Link smooth = {true} offset = {-90} duration = {1000} to = "contact">
+          <Link smooth={true} offset={-90} duration={1000} to="contact">
             Contact Us
           </Link>
         </Nav>
-        <a href = "/user/register">
-          Register
-        </a>
+        <a href="/user/register">Register</a>
       </Navbar.Collapse>
     </Navbar>
   );

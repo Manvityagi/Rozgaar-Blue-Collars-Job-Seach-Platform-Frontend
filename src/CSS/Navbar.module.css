@@ -15,7 +15,7 @@
 }
 
 .Brand:hover {
-  border: none; 
+  border: none;
   text-decoration: none;
 }
 
@@ -39,7 +39,7 @@ a:global(.active) {
   border-bottom: 2px solid #008dc8;
 }
 
-.NoUnderline:hover{
+.NoUnderline:hover {
   text-decoration: none;
 }
 
@@ -120,10 +120,10 @@ a:global(.active) {
   }
 }
 
-@media (max-width: 1270px){
+@media (max-width: 1270px) {
   .Middle {
     margin-left: 0px;
-  }  
+  }
   .ShiftRight {
     margin-left: 0px;
   }
@@ -136,25 +136,25 @@ a:global(.active) {
   }
 }
 
-@media (max-width: 1200px){
+@media (max-width: 1200px) {
   .Dropdown {
     margin-left: 265%;
   }
 }
 
-@media (max-width: 1150px){
+@media (max-width: 1150px) {
   .Dropdown {
     margin-left: 250%;
   }
 }
 
-@media (max-width: 1100px){
+@media (max-width: 1100px) {
   .Dropdown {
     margin-left: 230%;
   }
 }
 
-@media (max-width: 1050px){
+@media (max-width: 1050px) {
   .Dropdown {
     margin-left: 210%;
   }

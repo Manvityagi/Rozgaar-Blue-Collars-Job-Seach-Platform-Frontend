@@ -4,13 +4,13 @@ import { Navbar } from "react-bootstrap";
 
 function navbar() {
   return (
-    <Navbar fixed = "top" bg = "light" expand = "lg" className = {styles.NavBar}>
-        <Navbar.Brand className = {styles.Logo}>
-            <a href = "/" className = {styles.Brand} style = {{fontSize: "35px"}}>
-                Roz 
-                <span style = {{ color: "#008dc8" }}>gaar </span> 
-            </a>
-        </Navbar.Brand>
+    <Navbar fixed="top" bg="light" expand="lg" className={styles.NavBar}>
+      <Navbar.Brand className={styles.Logo}>
+        <a href="/" className={styles.Brand} style={{ fontSize: "35px" }}>
+          Roz
+          <span style={{ color: "#008dc8" }}>gaar </span>
+        </a>
+      </Navbar.Brand>
     </Navbar>
   );
 }

@@ -6,9 +6,15 @@ class UserProfile extends Component {
   render() {
     return (
       <div>
-        <Navbar/>
-        <div style={{marginTop:"120px" , marginLeft:"300px", marginRight:"300px"}}>
-            <UserProfileForm/>
+        <Navbar />
+        <div
+          style={{
+            marginTop: "120px",
+            marginLeft: "300px",
+            marginRight: "300px",
+          }}
+        >
+          <UserProfileForm />
         </div>
       </div>
     );

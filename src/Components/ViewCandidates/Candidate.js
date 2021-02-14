@@ -27,6 +27,7 @@ class Candidate extends Component {
         },
         (error) => {
           console.log(error);
+          alert(error);
         }
       );
   }

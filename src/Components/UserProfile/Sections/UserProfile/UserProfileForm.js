@@ -3,7 +3,7 @@ import axios from "axios";
 import { Button, Form } from "react-bootstrap";
 import styles from "../../../../CSS/Form.module.css";
 
-class PostJobForm extends Component {
+class UserProfileForm extends Component {
   constructor(props) {
     super(props);
 
@@ -16,7 +16,7 @@ class PostJobForm extends Component {
       otherSkills: "",
       currentLocation: "",
       availability: "",
-      messageForRecruiter: ""
+      messageForRecruiter: "",
     };
   }
 
@@ -41,15 +41,17 @@ class PostJobForm extends Component {
         otherSkills: this.state.otherSkills,
         currentLocation: this.state.currentLocation,
         availability: this.state.availability,
-        messageForRecruiter: this.state.messageForRecruiter
+        messageForRecruiter: this.state.messageForRecruiter,
       })
       .then((response) => {
         console.log(response);
         const data = response.data;
         this.setState({ data });
+        alert("Your profile is now visible to Recruiters");
       })
       .catch((error) => {
         console.log(error);
+        alert("Invalid Input");
       });
 
     this.setState({
@@ -61,7 +63,7 @@ class PostJobForm extends Component {
       otherSkills: "",
       currentLocation: "",
       availability: "",
-      messageForRecruiter: ""
+      messageForRecruiter: "",
     });
 
     // setTimeout(() => {
@@ -79,7 +81,7 @@ class PostJobForm extends Component {
       otherSkills,
       currentLocation,
       availability,
-      messageForRecruiter
+      messageForRecruiter,
     } = this.state;
 
     return (
@@ -123,7 +125,7 @@ class PostJobForm extends Component {
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
             />
-          </Form.Group>          
+          </Form.Group>
 
           <Form.Group>
             <Form.Control
@@ -220,4 +222,4 @@ class PostJobForm extends Component {
   }
 }
 
-export default PostJobForm;
+export default UserProfileForm;

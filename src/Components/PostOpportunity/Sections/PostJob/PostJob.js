@@ -6,9 +6,15 @@ class PostJob extends Component {
   render() {
     return (
       <div>
-        <Navbar/>
-        <div style={{marginTop:"120px" , marginLeft:"300px", marginRight:"300px"}}>
-            <PostJobForm/>
+        <Navbar />
+        <div
+          style={{
+            marginTop: "120px",
+            marginLeft: "300px",
+            marginRight: "300px",
+          }}
+        >
+          <PostJobForm />
         </div>
       </div>
     );

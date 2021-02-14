@@ -46,9 +46,11 @@ class PostJobForm extends Component {
         console.log(response);
         const data = response.data;
         this.setState({ data });
+        alert("Job Posted");
       })
       .catch((error) => {
         console.log(error);
+        alert("Invalid Input");
       });
 
     this.setState({

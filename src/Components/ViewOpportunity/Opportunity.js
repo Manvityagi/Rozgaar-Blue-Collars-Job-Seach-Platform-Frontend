@@ -26,6 +26,7 @@ class Opportunity extends Component {
           this.setState({ data });
         },
         (error) => {
+          alert(error)
           console.log(error);
         }
       );
