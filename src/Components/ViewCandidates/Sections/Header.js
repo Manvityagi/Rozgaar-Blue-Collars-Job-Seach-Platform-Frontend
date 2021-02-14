@@ -8,7 +8,7 @@ function Header(props) {
       <div className={styles.Background}>
         <div className={styles.Opportunity}>
           <h1> {props.title} </h1>
-          <a href={props.link}>
+          <a href="/jobs/post">
             <Button className={styles.Button}>Post an Opening</Button>
           </a>
         </div>
