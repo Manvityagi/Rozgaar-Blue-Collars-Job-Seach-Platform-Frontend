@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "../../../CSS/Navbar.module.css";
 import { Navbar } from "react-bootstrap";
+import { HiMicrophone } from "react-icons/hi";
+import SpeechRecognition from "react-speech-recognition";
 
 function navbar() {
   return (
@@ -11,6 +13,10 @@ function navbar() {
           <span style={{ color: "#008dc8" }}>gaar </span>
         </a>
       </Navbar.Brand>
+      <HiMicrophone
+        className={styles.microphone}
+        onClick={SpeechRecognition.startListening}
+      />
     </Navbar>
   );
 }

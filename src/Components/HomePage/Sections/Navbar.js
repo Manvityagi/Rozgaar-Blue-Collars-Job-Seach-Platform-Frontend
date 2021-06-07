@@ -1,8 +1,9 @@
 import React from "react";
 import styles from "../../../CSS/Navbar.module.css";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar, Nav , Button} from "react-bootstrap";
 import { Link } from "react-scroll";
-
+import { HiMicrophone } from "react-icons/hi";
+import SpeechRecognition from "react-speech-recognition";
 function navbar() {
   return (
     <Navbar fixed="top" bg="light" expand="lg" className={styles.NavBar}>
@@ -13,6 +14,10 @@ function navbar() {
         </a>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <HiMicrophone
+        className={styles.microphone}
+        onClick={SpeechRecognition.startListening}
+      />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
           <Link active smooth={true} duration={1000} to="home">
