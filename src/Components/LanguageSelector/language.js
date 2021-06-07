@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Dropdown, DropdownButton } from "react-bootstrap";
+import styles from "../../CSS/Navbar.module.css";
+import { NavDropdown, Dropdown, DropdownButton } from "react-bootstrap";
 import { lang } from "moment";
 
 const LanguageSelector = () => {
@@ -15,17 +16,18 @@ const LanguageSelector = () => {
   };
 
   return (
-    <DropdownButton
+    <NavDropdown
       onSelect={changeLanguage}
       id="dropdown-basic-button"
-      title="Pick Language"
+      title="Choose Language "
+      className={styles.LangDropdown}
     >
-      <Dropdown.Item eventKey="en">English</Dropdown.Item>
-      <Dropdown.Item eventKey="hn">Hindi</Dropdown.Item>
-      <Dropdown.Item eventKey="bengali">Bengali</Dropdown.Item>
-      <Dropdown.Item eventKey="marathi">Marathi</Dropdown.Item>
-      <Dropdown.Item eventKey="telugu">Telugu</Dropdown.Item>
-    </DropdownButton>
+      <NavDropdown.Item eventKey="en">English</NavDropdown.Item>
+      <NavDropdown.Item eventKey="hn">Hindi</NavDropdown.Item>
+      <NavDropdown.Item eventKey="bengali">Bengali</NavDropdown.Item>
+      <NavDropdown.Item eventKey="marathi">Marathi</NavDropdown.Item>
+      <NavDropdown.Item eventKey="telugu">Telugu</NavDropdown.Item>
+    </NavDropdown>
   );
 };
 

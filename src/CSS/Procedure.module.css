@@ -17,3 +17,14 @@
   color: #008dc8;
   font-family: "Poppins", sans-serif;
 }
+
+.CardImage {
+  width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+.CardTitle {
+  font-size: 1.4rem;
+}
