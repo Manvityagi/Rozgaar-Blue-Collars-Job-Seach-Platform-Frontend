@@ -3,6 +3,8 @@ import styles from "../../../CSS/Navbar.module.css";
 import { Navbar } from "react-bootstrap";
 import { withTranslation } from "react-i18next";
 import LanguageSelector from "../../LanguageSelector/language.js";
+import { HiMicrophone } from "react-icons/hi";
+import SpeechRecognition from "react-speech-recognition";
 
 function navbar({ t }) {
   return (
@@ -14,6 +16,10 @@ function navbar({ t }) {
         </a>
       </Navbar.Brand>
       {/* <LanguageSelector /> */}
+      <HiMicrophone
+        className={styles.microphone}
+        onClick={SpeechRecognition.startListening}
+      />
     </Navbar>
   );
 }

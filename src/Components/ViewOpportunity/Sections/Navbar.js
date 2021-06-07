@@ -2,12 +2,12 @@ import React from "react";
 import styles from "../../../CSS/Navbar.module.css";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import LanguageSelector from "../../LanguageSelector/language.js";
+import { HiMicrophone } from "react-icons/hi";
+import SpeechRecognition from "react-speech-recognition";
 // import { AiOutlineSearch } from "react-icons/ai"
 import { withTranslation } from "react-i18next";
 
 const navbar = ({ t }) => {
-  // const { t } = useTranslation();
-
   return (
     <Navbar fixed="top" bg="light" expand="lg" className={styles.NavBar}>
       <Navbar.Brand className={styles.Logo}>
@@ -18,6 +18,10 @@ const navbar = ({ t }) => {
       </Navbar.Brand>
       {/* <LanguageSelector /> */}
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <HiMicrophone
+        className={styles.microphone}
+        onClick={SpeechRecognition.startListening}
+      />
       <Navbar.Collapse id="basic-navbar-nav" className={styles.ShiftRight}>
         <Nav className="mr-auto">
           <NavDropdown
@@ -63,9 +67,6 @@ const navbar = ({ t }) => {
             </NavDropdown.Item>
           </NavDropdown>
         </Nav>
-        {/* <button className = {styles.Button}>
-                Login / SignUp
-            </button> */}
       </Navbar.Collapse>
     </Navbar>
   );

@@ -23,6 +23,10 @@
   background-color: #f8f8f8;
   border-color: #e7e7e7;
 }
+.microphone{
+   height: 40px;
+   width: 25px;
+}
 
 .Logo {
   letter-spacing: 0px;

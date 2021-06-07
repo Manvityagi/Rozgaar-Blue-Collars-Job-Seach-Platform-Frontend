@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "../../../CSS/Navbar.module.css";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { HiMicrophone } from "react-icons/hi";
+import SpeechRecognition from "react-speech-recognition";
 // import { AiOutlineSearch } from "react-icons/ai"
 import { withTranslation } from "react-i18next";
 import LanguageSelector from "../../LanguageSelector/language.js";
@@ -16,13 +18,17 @@ const navbar = ({ t }) => {
       </Navbar.Brand>
       {/* <LanguageSelector /> */}
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <HiMicrophone
+        className={styles.microphone}
+        onClick={SpeechRecognition.startListening}
+      />
       <Navbar.Collapse id="basic-navbar-nav" className={styles.ShiftRight}>
         {/* <Form inline>
                 <div className = {styles.Middle}>
-                    <FormControl 
-                        type = "text" 
-                        placeholder = "Search" 
-                        className = {styles.Search} 
+                    <FormControl
+                        type = "text"
+                        placeholder = "Search"
+                        className = {styles.Search}
                     />
                     <Button className = {styles.SearchButton}>
                         <AiOutlineSearch />

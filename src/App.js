@@ -1,17 +1,43 @@
-import React, { Suspense } from "react";
+import React, { Suspense,useState } from "react";
 
 import UserProfile from "./Components/UserProfile/Sections/UserProfile/UserProfile";
 
 import HomePage from "./Components/HomePage/HomePage";
-
+import pages from "./Components/VoiceRecognition/Pages"
+import urls from "./Components/VoiceRecognition/Urls"
 import PostJob from "./Components/PostOpportunity/Sections/PostJob/PostJob";
 
 import Footer from "./Components/Footer/Footer";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Redirect, Switch } from "react-router-dom";
 import { Opportunity } from "./Components/ViewOpportunity/Opportunity";
 import { Candidate } from "./Components/ViewCandidates/Candidate";
+import SpeechRecognition, {useSpeechRecognition} from "react-speech-recognition";
 
 function App() {
+  const commands = [
+    {
+      command: ["go to * page","open * page","view *","*"],
+      callback: redirectPage => setRedirectUrl(redirectPage)
+    }
+  ];
+  const { transcript } = useSpeechRecognition({ commands });
+  const [redirectUrl, setRedirectUrl] = useState("");
+
+  if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
+    return null;
+  }
+
+  let redirect = "";
+
+  if(redirectUrl){
+    if (pages.includes(redirectUrl)) {
+      redirect = <Redirect to={urls[redirectUrl]} />;
+
+    } else {
+      redirect = <p>Could not find page: {redirectUrl}</p>;
+    }
+  }
+
   return (
     <Router>
       <div className="App">
