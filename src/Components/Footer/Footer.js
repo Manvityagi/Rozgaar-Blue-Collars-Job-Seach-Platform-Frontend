@@ -10,8 +10,11 @@ import {
 } from "react-icons/fa";
 import { BiCopyright } from "react-icons/bi";
 import { GrMail } from "react-icons/gr";
+import { useTranslation } from "react-i18next";
 
 function Footer() {
+  const { t } = useTranslation();
+
   return (
     <Jumbotron id="contact" className={styles.Jumbotron}>
       <Container className={styles.Container}>
@@ -20,19 +23,19 @@ function Footer() {
             <Image className={styles.Logo} src={Logo} alt="Logo" />
           </Col>
           <Col className={styles.Column}>
-            <h5 className={styles.Border}> Links </h5>
-            <p> Terms and Condition </p>
-            <p> Privacy Policy </p>
+            <h5 className={styles.Border}> {t("links")} </h5>
+            <p> {t("Terms and Condition")} </p>
+            <p> {t("Privacy Policy")} </p>
           </Col>
           <hr className={styles.line2} />
           <Col className={styles.Column}>
-            <h5 className={styles.Border}> Services </h5>
-            <p> Hire Blue Collars </p>
-            <p> Get Jobs </p>
+            <h5 className={styles.Border}> {t("Services")} </h5>
+            <p> {t("Hire Blue Collars")} </p>
+            <p> {t("Get Jobs")} </p>
           </Col>
           <hr className={styles.line2} />
           <Col className={styles.Column}>
-            <h5 className={styles.Border}> Contact Us </h5>
+            <h5 className={styles.Border}> {t("Contact Us")} </h5>
             <Row>
               <Col md={10}>
                 <p>
@@ -62,22 +65,22 @@ function Footer() {
             </Row> */}
         <Row className={styles.Top2}>
           <Col>
-            <h5 style={{ textDecoration: "underline" }}> Links </h5>
-            <p> Terms and Condition </p>
-            <p> Privacy Policy </p>
+            <h5 style={{ textDecoration: "underline" }}> {t("links")} </h5>
+            <p> {t("Terms and Condition")} </p>
+            <p> {t("Privacy Policy")} </p>
           </Col>
           <Col>
             <h5 style={{ textAlign: "end", textDecoration: "underline" }}>
               {" "}
-              Services{" "}
+              {t("Services")}{" "}
             </h5>
-            <p style={{ textAlign: "end" }}> Hire Blue Collars </p>
-            <p style={{ textAlign: "end" }}> Get Jobs </p>
+            <p style={{ textAlign: "end" }}> {t("Hire Blue Collars")} </p>
+            <p style={{ textAlign: "end" }}> {t("Get Jobs")} </p>
           </Col>
         </Row>
         <Row className={styles.Top2}>
           <Col className={styles.Top3}>
-            <h5 style={{ textDecoration: "underline" }}> Contact Us </h5>
+            <h5 style={{ textDecoration: "underline" }}> {t("Contact Us")} </h5>
             <Row>
               <Col>
                 <p>

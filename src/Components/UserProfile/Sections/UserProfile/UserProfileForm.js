@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Button, Form } from "react-bootstrap";
 import styles from "../../../../CSS/Form.module.css";
-
+import { withTranslation } from "react-i18next";
 class UserProfileForm extends Component {
   constructor(props) {
     super(props);
@@ -72,6 +72,7 @@ class UserProfileForm extends Component {
   };
 
   render() {
+    const { t } = this.props;
     const {
       username,
       phoneNumber,
@@ -88,7 +89,7 @@ class UserProfileForm extends Component {
       <div style={{ marginBottom: "80px" }}>
         <Form onSubmit={this.handleSubmit}>
           <Form.Label className={styles.CardTitle}>
-            Add your profile to get hired
+            {t("Add your profile to get hired")}
           </Form.Label>
 
           <Form.Group>
@@ -97,7 +98,7 @@ class UserProfileForm extends Component {
               type="text"
               name="username"
               value={username}
-              placeholder="Username"
+              placeholder={t("Username")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
             />
@@ -109,7 +110,7 @@ class UserProfileForm extends Component {
               type="text"
               name="phoneNumber"
               value={phoneNumber}
-              placeholder="Phone Number"
+              placeholder={t("Phone Number")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
             />
@@ -121,7 +122,7 @@ class UserProfileForm extends Component {
               type="text"
               name="aadharNumber"
               value={aadharNumber}
-              placeholder="Aadhar Number"
+              placeholder={t("Aadhar Number")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
             />
@@ -137,17 +138,17 @@ class UserProfileForm extends Component {
               style={{ marginTop: "30px", marginLeft: "40px" }}
               onChange={this.handleChange}
             >
-              <option> Choose Category </option>
-              <option> ELECTRICIAN </option>
-              <option> PLUMBER </option>
-              <option> MECHANIC </option>
-              <option> COOK </option>
-              <option> PEON </option>
-              <option> DRIVER </option>
-              <option> MAID </option>
-              <option> LABOUR </option>
-              <option> SECURITY GUARD </option>
-              <option> OTHERS </option>
+              <option> {t("Choose Category")} </option>
+              <option> {t("ELECTRICIAN")} </option>
+              <option> {t("PLUMBER")} </option>
+              <option> {t("MECHANIC")} </option>
+              <option> {t("COOK")} </option>
+              <option> {t("PEON")} </option>
+              <option> {t("DRIVER")} </option>
+              <option> {t("MAID")} </option>
+              <option> {t("LABOUR")} </option>
+              <option> {t("SECURITY GUARD")} </option>
+              <option> {t("OTHERS")} </option>
             </Form.Control>
           </Form.Group>
 
@@ -157,7 +158,7 @@ class UserProfileForm extends Component {
               type="text"
               name="YOE"
               value={YOE}
-              placeholder="Years of Experience"
+              placeholder={t("Years of Experience")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
             />
@@ -169,7 +170,7 @@ class UserProfileForm extends Component {
               type="text"
               name="otherSkills"
               value={otherSkills}
-              placeholder="Any Other Skill?"
+              placeholder={t("Any Other Skill?")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
             />
@@ -181,7 +182,7 @@ class UserProfileForm extends Component {
               type="text"
               name="currentLocation"
               value={currentLocation}
-              placeholder="Current Location"
+              placeholder={t("Current Location")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
             />
@@ -193,7 +194,7 @@ class UserProfileForm extends Component {
               type="text"
               name="availability"
               value={availability}
-              placeholder="Date of Availability (YYYY/MM/DD)"
+              placeholder={t("Date of Availability (YYYY/MM/DD)")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
             />
@@ -205,7 +206,9 @@ class UserProfileForm extends Component {
               rows={4}
               name="messageForRecruiter"
               value={messageForRecruiter}
-              placeholder="Anything you want to share with the recruiter..."
+              placeholder={t(
+                "Anything you want to share with the recruiter..."
+              )}
               style={{ marginTop: "35px", marginLeft: "40px" }}
               onChange={this.handleChange}
             />
@@ -213,7 +216,7 @@ class UserProfileForm extends Component {
 
           <Form.Group>
             <Button className={styles.Button} type="submit">
-              Submit
+              {t("Submit")}
             </Button>
           </Form.Group>
         </Form>
@@ -222,4 +225,4 @@ class UserProfileForm extends Component {
   }
 }
 
-export default UserProfileForm;
+export default withTranslation()(UserProfileForm);

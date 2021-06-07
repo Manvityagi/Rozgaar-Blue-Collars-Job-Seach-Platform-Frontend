@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Button, Form } from "react-bootstrap";
 import styles from "../../../../CSS/Form.module.css";
+import { withTranslation } from "react-i18next";
 
 class PostJobForm extends Component {
   constructor(props) {
@@ -70,6 +71,7 @@ class PostJobForm extends Component {
   };
 
   render() {
+    const { t } = this.props;
     const {
       title,
       recruiterEmailId,
@@ -85,7 +87,7 @@ class PostJobForm extends Component {
       <div style={{ marginBottom: "80px" }}>
         <Form onSubmit={this.handleSubmit}>
           <Form.Label className={styles.CardTitle}>
-            Let job seekers know you need them
+            {t("Let job seekers know you need them")}
           </Form.Label>
 
           <Form.Group>
@@ -94,7 +96,7 @@ class PostJobForm extends Component {
               type="text"
               name="title"
               value={title}
-              placeholder="Your Name / Company Name"
+              placeholder={t("Your Name / Company Name")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
             />
@@ -106,7 +108,7 @@ class PostJobForm extends Component {
               type="email"
               name="recruiterEmailId"
               value={recruiterEmailId}
-              placeholder="Email"
+              placeholder={t("Email")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
             />
@@ -118,7 +120,7 @@ class PostJobForm extends Component {
               type="text"
               name="recruiterPhoneNumber"
               value={recruiterPhoneNumber}
-              placeholder="Contact Number"
+              placeholder={t("Contact Number")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
             />
@@ -134,17 +136,17 @@ class PostJobForm extends Component {
               style={{ marginTop: "30px", marginLeft: "40px" }}
               onChange={this.handleChange}
             >
-              <option> Choose Category </option>
-              <option> ELECTRICIAN </option>
-              <option> PLUMBER </option>
-              <option> MECHANIC </option>
-              <option> COOK </option>
-              <option> PEON </option>
-              <option> DRIVER </option>
-              <option> MAID </option>
-              <option> LABOUR </option>
-              <option> SECURITY GUARD </option>
-              <option> OTHERS </option>
+              <option> {t("Choose Category")} </option>
+              <option> {t("ELECTRICIAN")} </option>
+              <option> {t("PLUMBER")} </option>
+              <option> {t("MECHANIC")} </option>
+              <option> {t("COOK")} </option>
+              <option> {t("PEON")} </option>
+              <option> {t("DRIVER")} </option>
+              <option> {t("MAID")} </option>
+              <option> {t("LABOUR")} </option>
+              <option> {t("SECURITY GUARD")} </option>
+              <option> {t("OTHERS")} </option>
             </Form.Control>
           </Form.Group>
 
@@ -154,7 +156,7 @@ class PostJobForm extends Component {
               rows={4}
               name="description"
               value={description}
-              placeholder="Short Description"
+              placeholder={t("Short Description")}
               style={{ marginTop: "35px", marginLeft: "40px" }}
               onChange={this.handleChange}
             />
@@ -166,7 +168,7 @@ class PostJobForm extends Component {
               type="text"
               name="location"
               value={location}
-              placeholder="Location"
+              placeholder={t("Location")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
             />
@@ -178,7 +180,7 @@ class PostJobForm extends Component {
               type="text"
               name="offeredSalary"
               value={offeredSalary}
-              placeholder="Offered Salary (Per Month)"
+              placeholder={t("Offered Salary (Per Month)")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
             />
@@ -190,7 +192,7 @@ class PostJobForm extends Component {
               type="text"
               name="numberOfPositions"
               value={numberOfPositions}
-              placeholder="No. of Positions"
+              placeholder={t("No. of Positions")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
             />
@@ -198,7 +200,7 @@ class PostJobForm extends Component {
 
           <Form.Group>
             <Button className={styles.Button} type="submit">
-              Submit
+              {t("Submit")}
             </Button>
           </Form.Group>
         </Form>
@@ -207,4 +209,4 @@ class PostJobForm extends Component {
   }
 }
 
-export default PostJobForm;
+export default withTranslation()(PostJobForm);

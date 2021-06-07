@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 import styles from "../../CSS/ApplyJob.module.css";
+import { withTranslation } from "react-i18next";
 
 class ApplyJob extends Component {
   constructor(props) {
@@ -57,7 +58,7 @@ class ApplyJob extends Component {
 
   render() {
     const { aadharNumber } = this.state;
-    const { handleClose } = this.props;
+    const { handleClose, t } = this.props;
 
     return (
       <div className={styles.PopUpBox}>
@@ -67,9 +68,9 @@ class ApplyJob extends Component {
           </span>
           <p>
             {" "}
-            If you haven't registered yet, please
-            <a href="/user/register"> register </a>
-            before applying.
+            {t("If you haven't registered yet, please")}
+            <a href="/user/register"> {t("register")} </a>
+            {t("before applying.")}
           </p>
           <Form onSubmit={this.handleSubmit}>
             <Form.Group controlId="formBasicEmail">
@@ -82,7 +83,7 @@ class ApplyJob extends Component {
               />
             </Form.Group>
             <Button className={styles.Button} type="submit">
-              Submit
+            {t("Submit")}
             </Button>
           </Form>
         </div>
@@ -91,4 +92,4 @@ class ApplyJob extends Component {
   }
 }
 
-export default ApplyJob;
+export default withTranslation()(ApplyJob);

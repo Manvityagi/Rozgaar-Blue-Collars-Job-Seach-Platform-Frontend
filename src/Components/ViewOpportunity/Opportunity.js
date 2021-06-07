@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "./Sections/Navbar";
 import { Container, Jumbotron, Spinner } from "react-bootstrap";
-import { OpportunityCard } from "./Card";
+import OpportunityCard from "./Card";
 import Header from "./Sections/Header";
 import styles from "../../CSS/Electrician.module.css";
 import axios from "axios";

@@ -3,8 +3,10 @@ import { Card, Row, Col, Container } from "react-bootstrap";
 import { BiRupee } from "react-icons/bi";
 import styles from "../../CSS/Electrician.module.css";
 import ApplyJob from "../ApplyJob/ApplyJob";
+import { useTranslation } from "react-i18next";
 
-function OpportunityCard(props) {
+const OpportunityCard = (props) => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const togglePopup = () => {
@@ -40,7 +42,7 @@ function OpportunityCard(props) {
               <Col md={6} lg={6}>
                 <Row>
                   <h5 className={styles.Heading} style={{ marginLeft: "20px" }}>
-                    Location :
+                    {t("Location")} :
                   </h5>
                   <h5 className={styles.Value}>{item.location}</h5>
                 </Row>
@@ -53,7 +55,7 @@ function OpportunityCard(props) {
                       className={styles.Heading}
                       style={{ marginLeft: "4px" }}
                     >
-                      No. of Positions :
+                      {t("No. of Positions")} :
                       <span className={styles.Value}>
                         {item.numberOfPositions}
                       </span>
@@ -70,10 +72,10 @@ function OpportunityCard(props) {
                       className={styles.Heading}
                       style={{ marginLeft: "4px" }}
                     >
-                      Offered Salary :
+                      {t("Offered Salary")} :
                       <span className={styles.Value}>
                         <BiRupee style={{ fontSize: "1.3rem" }} />
-                        {item.offeredSalary} per month
+                        {item.offeredSalary} {t("per month")}
                       </span>
                     </h5>
                   </Container>
@@ -85,7 +87,7 @@ function OpportunityCard(props) {
               <Col md={0} lg={12}>
                 <a href={item.jobURL} className={styles.shiftRight}>
                   <button className={styles.Button} onClick={togglePopup}>
-                    Apply
+                    {t("Apply")}
                   </button>
                 </a>
                 {isOpen && (
@@ -98,6 +100,6 @@ function OpportunityCard(props) {
       </Card>
     </div>
   );
-}
+};
 
-export { OpportunityCard };
+export default OpportunityCard;

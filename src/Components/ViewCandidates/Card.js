@@ -2,9 +2,11 @@ import React from "react";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import styles from "../../CSS/Electrician.module.css";
 import Moment from "react-moment";
+import { useTranslation } from "react-i18next";
 
 function CandidateCard(props) {
   const { item } = props;
+  const { t } = useTranslation();
   return (
     <div id="fulltime" className={styles.Box}>
       <Card style={{ width: "80rem", borderRadius: "10px" }}>
@@ -32,7 +34,7 @@ function CandidateCard(props) {
               <Col md={6} lg={6}>
                 <Row>
                   <h5 className={styles.Heading} style={{ marginLeft: "20px" }}>
-                    Current Location:
+                    {t("Current Location")}:
                   </h5>
                   <h5 className={styles.Value}>{item.location}</h5>
                 </Row>
@@ -45,7 +47,7 @@ function CandidateCard(props) {
                       className={styles.Heading}
                       style={{ marginLeft: "4px" }}
                     >
-                      Date of Availability :
+                      {t("Date of Availability")}:
                       <span className={styles.Value}>
                         <Moment format="YYYY/MM/DD">{item.availability}</Moment>
                       </span>
@@ -62,7 +64,7 @@ function CandidateCard(props) {
                       className={styles.Heading}
                       style={{ marginLeft: "4px" }}
                     >
-                      Years of Experience:
+                      {t("Years of Experience:")}
                       <span className={styles.Value}>{item.YOE}</span>
                     </h5>
                   </Container>
@@ -75,7 +77,7 @@ function CandidateCard(props) {
                 <a href={item.jobURL} className={styles.shiftRight}>
                   <button
                     className={styles.Button}
-                    data-active="Hire Me"
+                    data-active={t("Hire Me")}
                     data-hover={item.phoneNumber}
                   />
                 </a>

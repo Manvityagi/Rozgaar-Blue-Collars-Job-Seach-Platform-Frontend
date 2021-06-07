@@ -1,14 +1,16 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import styles from "../../../CSS/KnowAboutCard.module.css";
+import { useTranslation } from "react-i18next";
 
-function KnowAbout(props) {
+const KnowAbout = (props) => {
+  const { t } = useTranslation();
   return (
     <div id="knowAbout" className={styles.Box}>
       <Card style={{ width: "13rem", borderRadius: "20px" }}>
         <Card.Img
           variant="top"
-          src={require("../../../Assets/" + props.knowAbout.imgUrl)}
+          src={require("../../../Assets/electrician.png")}
           alt="Image"
           className={styles.CardImage}
         />
@@ -19,15 +21,15 @@ function KnowAbout(props) {
             </Card.Title>
           </div>
           <a href={props.knowAbout.jobLink} className={styles.Links}>
-            View Jobs
+            {t("View Jobs")}
           </a>
           <a href={props.knowAbout.candLink} className={styles.Links}>
-            View Candidates
+            {t("View Candidates")}
           </a>
         </Card.Body>
       </Card>
     </div>
   );
-}
+};
 
 export default KnowAbout;

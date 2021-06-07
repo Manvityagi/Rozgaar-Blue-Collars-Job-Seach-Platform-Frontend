@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "../Navbar";
+// import Navbar from "../../../HomePage/Sections/Navbar";
 import UserProfileForm from "./UserProfileForm";
 
 class UserProfile extends Component {
