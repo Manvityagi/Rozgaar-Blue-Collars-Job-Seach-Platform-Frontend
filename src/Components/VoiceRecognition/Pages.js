@@ -149,6 +149,7 @@ const pages = [
   "security guard chahiye",
   "post jobs",
   "post job",
-  "registration"
+  "registration",
+  "register"
 ];
 export default pages;
