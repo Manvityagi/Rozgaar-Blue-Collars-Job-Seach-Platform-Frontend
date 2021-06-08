@@ -28,8 +28,7 @@ class KnowAbout extends Component {
             <span className={styles.About}> {t("Job Seeker")} </span>?
           </h2>
           <Row
-            className="justify-content-md-center"
-            style={{ marginTop: "50px" }}
+            style={{ marginTop: "50px", justifyContent: "space-evenly" }}
           >
             {/* {JobSeekerData} */}
             <div id="procedure" className={styles.Box}>
@@ -39,6 +38,7 @@ class KnowAbout extends Component {
                   borderRadius: "50%",
                   border: "#bd6997 solid 4px",
                   marginRight: "0px",
+                  textAlign: "center"
                 }}
               >
                 <Card.Img
@@ -63,6 +63,7 @@ class KnowAbout extends Component {
                   borderRadius: "50%",
                   border: "#bd6997 solid 4px",
                   marginRight: "0px",
+                  textAlign: "center"
                 }}
               >
                 <Card.Img
@@ -88,6 +89,7 @@ class KnowAbout extends Component {
                   borderRadius: "50%",
                   border: "#bd6997 solid 4px",
                   marginRight: "0px",
+                  textAlign: "center"
                 }}
               >
                 <Card.Img
@@ -113,6 +115,7 @@ class KnowAbout extends Component {
                   borderRadius: "50%",
                   border: "#bd6997 solid 4px",
                   marginRight: "0px",
+                  textAlign: "center"
                 }}
               >
                 <Card.Img

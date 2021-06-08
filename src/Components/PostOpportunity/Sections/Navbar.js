@@ -1,11 +1,17 @@
 import React from "react";
 import styles from "../../../CSS/Navbar.module.css";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Tooltip, OverlayTrigger } from "react-bootstrap";
 import { HiMicrophone } from "react-icons/hi";
 import SpeechRecognition from "react-speech-recognition";
 // import { AiOutlineSearch } from "react-icons/ai"
 import { withTranslation } from "react-i18next";
 import LanguageSelector from "../../LanguageSelector/language.js";
+
+const renderTooltip = (props) => (
+  <Tooltip id="button-tooltip" {...props}>
+    Click and Speak to Navigate
+  </Tooltip>
+);
 
 const navbar = ({ t }) => {
   return (
@@ -16,12 +22,7 @@ const navbar = ({ t }) => {
           <span style={{ color: "#008dc8" }}>{t("gaar")} </span>
         </a>
       </Navbar.Brand>
-      {/* <LanguageSelector /> */}
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <HiMicrophone
-        className={styles.microphone}
-        onClick={SpeechRecognition.startListening}
-      />
       <Navbar.Collapse id="basic-navbar-nav" className={styles.ShiftRight}>
         {/* <Form inline>
                 <div className = {styles.Middle}>
@@ -79,6 +80,17 @@ const navbar = ({ t }) => {
                 Login / SignUp
             </button> */}
       </Navbar.Collapse>
+      {/* <LanguageSelector /> */}
+      <OverlayTrigger
+    placement="bottom"
+    delay={{ show: 250, hide: 400 }}
+    overlay={renderTooltip}
+  >
+     <HiMicrophone
+        className={styles.microphone}
+        onClick={SpeechRecognition.startListening}
+      />
+  </OverlayTrigger>
     </Navbar>
   );
 };
