@@ -40,17 +40,17 @@ const navbar = ({ t }) => {
         </Nav>
         <a href="/user/register">{t("Register")}</a>
       </Navbar.Collapse>
-      <LanguageSelector />
+      <LanguageSelector langtype={false} />
       <OverlayTrigger
-    placement="bottom"
-    delay={{ show: 250, hide: 400 }}
-    overlay={renderTooltip}
-  >
-     <HiMicrophone
-        className={styles.microphone}
-        onClick={SpeechRecognition.startListening}
-      />
-  </OverlayTrigger>
+        placement="bottom"
+        delay={{ show: 250, hide: 400 }}
+        overlay={renderTooltip}
+      >
+        <HiMicrophone
+          className={styles.microphone}
+          onClick={SpeechRecognition.startListening}
+        />
+      </OverlayTrigger>
     </Navbar>
   );
 };

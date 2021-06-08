@@ -4,7 +4,7 @@ import styles from "../../CSS/Navbar.module.css";
 import { NavDropdown, Dropdown, DropdownButton } from "react-bootstrap";
 import { lang } from "moment";
 
-const LanguageSelector = () => {
+const LanguageSelector = (props) => {
   const { i18n } = useTranslation();
 
   const [language, setLanguage] = useState("en");
@@ -20,7 +20,11 @@ const LanguageSelector = () => {
       onSelect={changeLanguage}
       id="dropdown-basic-button"
       title="Choose Language "
-      className={styles.LangDropdown}
+      className={
+        props.langtype
+          ? styles.LangDropdownForRegistration
+          : styles.LangDropdown
+      }
     >
       <NavDropdown.Item eventKey="en">English</NavDropdown.Item>
       <NavDropdown.Item eventKey="hn">Hindi</NavDropdown.Item>

@@ -83,7 +83,7 @@ a:global(.active) {
   color: #fff;
   /* margin-left: 390%; */
   position: absolute;
-  right: 60px;
+  right: 215px;
   bottom: 15px;
   font-family: "Inter", sans-serif;
   border-radius: 10px 10px 0px 0px;
@@ -98,7 +98,13 @@ a:global(.active) {
   color: "white";
   background-color: "#fff";
 }
+.LangDropdownForRegistration {
+  color: "white";
+  background-color: "#fff";
+  position: absolute;
+  right: 40px;
 
+}
 .Button {
   background-color: #008dc8;
   border: none;

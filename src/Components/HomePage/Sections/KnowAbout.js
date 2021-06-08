@@ -48,7 +48,7 @@ class KnowAbout extends Component {
                   <a href="/jobs/electrician" className={styles.Links}>
                     {t("View Jobs")}
                   </a>
-                  <br/>
+                  <br />
                   <a href="candidates/electrician" className={styles.Links}>
                     {t("View Candidates")}
                   </a>
@@ -72,7 +72,7 @@ class KnowAbout extends Component {
                   <a href="/jobs/plumber" className={styles.Links}>
                     {t("View Jobs")}
                   </a>
-                  <br/>
+                  <br />
                   <a href="candidates/plumber" className={styles.Links}>
                     {t("View Candidates")}
                   </a>
@@ -96,18 +96,18 @@ class KnowAbout extends Component {
                   <a href="/jobs/mechanic" className={styles.Links}>
                     {t("View Jobs")}
                   </a>
-                  <br/>
+                  <br />
                   <a href="candidates/mechanic" className={styles.Links}>
                     {t("View Candidates")}
                   </a>
                 </Card.Body>
               </Card>
             </Col>
-            </Row>
-            <Row
-              className="justify-content-md-center"
-              style={{ marginTop: "50px" }}
-            >
+          </Row>
+          <Row
+            className="justify-content-md-center"
+            style={{ marginTop: "50px" }}
+          >
             <Col id="knowAbout" className={styles.Box}>
               <Card style={{ width: "13rem", borderRadius: "20px" }}>
                 <Card.Img
@@ -122,11 +122,11 @@ class KnowAbout extends Component {
                       {t("Cook")}
                     </Card.Title>
                   </div>
-                  <a href="/jobs/cook" className={styles.Links}>
+                  <a href="/jobs/cooking" className={styles.Links}>
                     {t("View Jobs")}
                   </a>
-                  <br/>
-                  <a href="candidates/cook" className={styles.Links}>
+                  <br />
+                  <a href="candidates/cooking" className={styles.Links}>
                     {t("View Candidates")}
                   </a>
                 </Card.Body>
@@ -149,7 +149,7 @@ class KnowAbout extends Component {
                   <a href="/jobs/peon" className={styles.Links}>
                     {t("View Jobs")}
                   </a>
-                  <br/>
+                  <br />
                   <a href="candidates/peon" className={styles.Links}>
                     {t("View Candidates")}
                   </a>
@@ -173,18 +173,18 @@ class KnowAbout extends Component {
                   <a href="/jobs/driver" className={styles.Links}>
                     {t("View Jobs")}
                   </a>
-                  <br/>
+                  <br />
                   <a href="candidates/driver" className={styles.Links}>
                     {t("View Candidates")}
                   </a>
                 </Card.Body>
               </Card>
             </Col>
-            </Row>
-            <Row
-              className="justify-content-md-center"
-              style={{ marginTop: "50px" }}
-            >
+          </Row>
+          <Row
+            className="justify-content-md-center"
+            style={{ marginTop: "50px" }}
+          >
             <Col id="knowAbout" className={styles.Box}>
               <Card style={{ width: "13rem", borderRadius: "20px" }}>
                 <Card.Img
@@ -199,11 +199,11 @@ class KnowAbout extends Component {
                       {t("House Keeping")}
                     </Card.Title>
                   </div>
-                  <a href="/jobs/maid" className={styles.Links}>
+                  <a href="/jobs/housekeeping" className={styles.Links}>
                     {t("View Jobs")}
                   </a>
-                  <br/>
-                  <a href="candidates/maid" className={styles.Links}>
+                  <br />
+                  <a href="/candidates/housekeeping" className={styles.Links}>
                     {t("View Candidates")}
                   </a>
                 </Card.Body>
@@ -226,7 +226,7 @@ class KnowAbout extends Component {
                   <a href="/jobs/siteworkers" className={styles.Links}>
                     {t("View Jobs")}
                   </a>
-                  <br/>
+                  <br />
                   <a href="candidates/siteworkers" className={styles.Links}>
                     {t("View Candidates")}
                   </a>
@@ -250,7 +250,7 @@ class KnowAbout extends Component {
                   <a href="/jobs/securityguard" className={styles.Links}>
                     {t("View Jobs")}
                   </a>
-                  <br/>
+                  <br />
                   <a href="candidates/securityguard" className={styles.Links}>
                     {t("View Candidates")}
                   </a>
