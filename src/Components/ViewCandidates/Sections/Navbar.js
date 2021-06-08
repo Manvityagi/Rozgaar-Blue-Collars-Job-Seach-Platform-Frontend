@@ -30,35 +30,35 @@ const navbar = ({ t }) => {
             id="dropdown-basic-button"
             className={styles.Dropdown}
           >
-            <NavDropdown.Item href="/jobs/electrician">
+            <NavDropdown.Item href="/candidates/electrician">
               {" "}
               {t("Electrician")}{" "}
             </NavDropdown.Item>
-            <NavDropdown.Item href="/jobs/plumber">
+            <NavDropdown.Item href="/candidates/plumber">
               {" "}
               {t("Plumber")}{" "}
             </NavDropdown.Item>
-            <NavDropdown.Item href="/jobs/mechanic">
+            <NavDropdown.Item href="/candidates/mechanic">
               {" "}
               {t("Mechanic")}{" "}
             </NavDropdown.Item>
-            <NavDropdown.Item href="/jobs/cooking">
+            <NavDropdown.Item href="/candidates/cooking">
               {t("Cook")}{" "}
             </NavDropdown.Item>
-            <NavDropdown.Item href="/jobs/peon"> {t("Peon")} </NavDropdown.Item>
-            <NavDropdown.Item href="/jobs/driver">
+            <NavDropdown.Item href="/candidates/peon"> {t("Peon")} </NavDropdown.Item>
+            <NavDropdown.Item href="/candidates/driver">
               {" "}
               {t("Driver")}{" "}
             </NavDropdown.Item>
-            <NavDropdown.Item href="/jobs/housekeeping">
+            <NavDropdown.Item href="/candidates/housekeeping">
               {" "}
               {t("House Keeping")}{" "}
             </NavDropdown.Item>
-            <NavDropdown.Item href="/jobs/siteworkers">
+            <NavDropdown.Item href="/candidates/siteworkers">
               {" "}
               {t("Construction Site Worker")}{" "}
             </NavDropdown.Item>
-            <NavDropdown.Item href="/jobs/securityguard">
+            <NavDropdown.Item href="/candidates/securityguard">
               {" "}
               {t("Security Guard")}{" "}
             </NavDropdown.Item>

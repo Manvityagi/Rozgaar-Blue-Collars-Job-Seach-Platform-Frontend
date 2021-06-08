@@ -36,7 +36,7 @@ function CandidateCard(props) {
                   <h5 className={styles.Heading} style={{ marginLeft: "20px" }}>
                     {t("Current Location")}:
                   </h5>
-                  <h5 className={styles.Value}>{item.location}</h5>
+                  <h5 className={styles.Value}>{item.currentLocation}</h5>
                 </Row>
               </Col>
 
@@ -64,7 +64,7 @@ function CandidateCard(props) {
                       className={styles.Heading}
                       style={{ marginLeft: "4px" }}
                     >
-                      {t("Years of Experience:")}
+                      {t("Years of Experience")}:
                       <span className={styles.Value}>{item.YOE}</span>
                     </h5>
                   </Container>

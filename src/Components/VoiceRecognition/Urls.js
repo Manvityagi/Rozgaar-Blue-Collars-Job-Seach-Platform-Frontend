@@ -149,6 +149,7 @@ const urls = {
   "siteworker chahiye": "/candidates/siteworkers",
   "securityguard chahiye": "/candidates/securityguard",
   "security guard chahiye": "/candidates/securityguard",
-  registration: "/user/register"
+  registration: "/user/register",
+  register: "/user/register"
 };
 export default urls;

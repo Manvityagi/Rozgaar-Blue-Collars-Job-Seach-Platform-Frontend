@@ -66,9 +66,9 @@ class UserProfileForm extends Component {
       messageForRecruiter: "",
     });
 
-    // setTimeout(() => {
-    //   window.location.href = "/";
-    // }, 1000);
+    setTimeout(() => {
+      window.location.href = "/";
+    }, 1000);
   };
 
   render() {
