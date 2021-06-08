@@ -21,17 +21,18 @@ function navbar({ t }) {
           <span style={{ color: "#008dc8" }}>{t("gaar")} </span>
         </a>
       </Navbar.Brand>
-      {/* <LanguageSelector /> */}
+
+      <LanguageSelector langtype={true} />
       <OverlayTrigger
-    placement="bottom"
-    delay={{ show: 250, hide: 400 }}
-    overlay={renderTooltip}
-  >
-     <HiMicrophone
-        className={styles.microphone}
-        onClick={SpeechRecognition.startListening}
-      />
-  </OverlayTrigger>
+        placement="bottom"
+        delay={{ show: 250, hide: 400 }}
+        overlay={renderTooltip}
+      >
+        <HiMicrophone
+          className={styles.microphone}
+          onClick={SpeechRecognition.startListening}
+        />
+      </OverlayTrigger>
     </Navbar>
   );
 }
