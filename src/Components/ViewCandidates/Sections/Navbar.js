@@ -7,6 +7,7 @@ import {
   Tooltip,
   OverlayTrigger,
 } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { HiMicrophone } from "react-icons/hi";
 import SpeechRecognition from "react-speech-recognition";
 // import { AiOutlineSearch } from "react-icons/ai"
@@ -23,10 +24,10 @@ const navbar = ({ t }) => {
   return (
     <Navbar fixed="top" bg="light" expand="lg" className={styles.NavBar}>
       <Navbar.Brand className={styles.Logo}>
-        <a href="/" className={styles.Brand} style={{ fontSize: "35px" }}>
+        <Link to="/" className={styles.Brand} style={{ fontSize: "35px" }}>
           {t("Roz")}
           <span style={{ color: "#008dc8" }}>{t("gaar")} </span>
-        </a>
+        </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className={styles.ShiftRight}>
@@ -36,40 +37,58 @@ const navbar = ({ t }) => {
             id="dropdown-basic-button"
             className={styles.Dropdown}
           >
-            <NavDropdown.Item href="/candidates/electrician">
-              {" "}
-              {t("Electrician")}{" "}
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/candidates/electrician">
+                {t("Electrician")}
+              </Nav.Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/candidates/plumber">
-              {" "}
-              {t("Plumber")}{" "}
+
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/candidates/plumber">
+                {t("Plumber")}
+              </Nav.Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/candidates/mechanic">
-              {" "}
-              {t("Mechanic")}{" "}
+
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/candidates/mechanic">
+                {t("Mechanic")}
+              </Nav.Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/candidates/cooking">
-              {t("Cook")}{" "}
+
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/candidates/cooking">
+                {t("Cook")}
+              </Nav.Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/candidates/peon">
-              {" "}
-              {t("Peon")}{" "}
+
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/candidates/peon">
+                {t("Peon")}
+              </Nav.Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/candidates/driver">
-              {" "}
-              {t("Driver")}{" "}
+
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/candidates/driver">
+                {t("Driver")}
+              </Nav.Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/candidates/housekeeping">
-              {" "}
-              {t("House Keeping")}{" "}
+
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/candidates/housekeeping">
+                {t("House Keeping")}
+              </Nav.Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/candidates/siteworkers">
-              {" "}
-              {t("Construction Site Worker")}{" "}
+
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/candidates/siteworkers">
+                {t("Construction Site Worker")}
+              </Nav.Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/candidates/securityguard">
-              {" "}
-              {t("Security Guard")}{" "}
+
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/candidates/securityguard">
+                {t("Security Guard")}
+              </Nav.Link>
             </NavDropdown.Item>
           </NavDropdown>
         </Nav>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import styles from "../../CSS/Electrician.module.css";
 import Moment from "react-moment";
@@ -74,13 +75,13 @@ function CandidateCard(props) {
 
             <Row>
               <Col md={0} lg={12}>
-                <a href={item.jobURL} className={styles.shiftRight}>
+                <Link to={item.jobURL} className={styles.shiftRight}>
                   <button
                     className={styles.Button}
                     data-active={t("Hire Me")}
                     data-hover={item.phoneNumber}
                   />
-                </a>
+                </Link>
               </Col>
             </Row>
           </Container>

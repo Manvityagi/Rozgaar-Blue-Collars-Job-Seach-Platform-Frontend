@@ -3,7 +3,6 @@ import styles from "../../../CSS/Navbar.module.css";
 import {
   Navbar,
   Nav,
-  NavLink,
   NavDropdown,
   Tooltip,
   OverlayTrigger,
@@ -32,63 +31,67 @@ const navbar = ({ t }) => {
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className={styles.ShiftRight}>
-        {/* <Form inline>
-                <div className = {styles.Middle}>
-                    <FormControl
-                        type = "text"
-                        placeholder = "Search"
-                        className = {styles.Search}
-                    />
-                    <Button className = {styles.SearchButton}>
-                        <AiOutlineSearch />
-                    </Button>
-                </div>
-            </Form> */}
         <Nav className="mr-auto">
           <NavDropdown
             title={<span className={styles.Title}>{t("Opportunities")}</span>}
             id="dropdown-basic-button"
             className={styles.Dropdown}
           >
-            {/* Vaishali - change all these links like 1st one */}
             <NavDropdown.Item>
               <Nav.Link as={Link} to="/jobs/electrician">
-                {t("Electrician")}{" "}
-              </Nav.Link>{" "}
+                {t("Electrician")}
+              </Nav.Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/jobs/plumber">
-              {" "}
-              {t("Plumber")}{" "}
+
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/jobs/plumber">
+                {t("Plumber")}
+              </Nav.Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/jobs/mechanic">
-              {" "}
-              {t("Mechanic")}{" "}
+
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/jobs/mechanic">
+                {t("Mechanic")}
+              </Nav.Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/jobs/cooking">
-              {t("Cook")}{" "}
+
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/jobs/cooking">
+                {t("Cook")}
+              </Nav.Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/jobs/peon"> {t("Peon")} </NavDropdown.Item>
-            <NavDropdown.Item href="/jobs/driver">
-              {" "}
-              {t("Driver")}{" "}
+
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/jobs/peon">
+                {t("Peon")}
+              </Nav.Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/jobs/housekeeping">
-              {" "}
-              {t("House Keeping")}{" "}
+
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/jobs/driver">
+                {t("Driver")}
+              </Nav.Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/jobs/siteworkers">
-              {" "}
-              {t("Construction Site Worker")}{" "}
+
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/jobs/housekeeping">
+                {t("House Keeping")}
+              </Nav.Link>
             </NavDropdown.Item>
-            <NavDropdown.Item href="/jobs/securityguard">
-              {" "}
-              {t("Security Guard")}{" "}
+
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/jobs/siteworkers">
+                {t("Construction Site Worker")}
+              </Nav.Link>
+            </NavDropdown.Item>
+
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/jobs/securityguard">
+                {t("Security Guard")}
+              </Nav.Link>
             </NavDropdown.Item>
           </NavDropdown>
         </Nav>
-        {/* <button className = {styles.Button}>
-                Login / SignUp
-            </button> */}
       </Navbar.Collapse>
       <LanguageSelector langtype={false} />
       <OverlayTrigger

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import styles from "../../../CSS/Electrician.module.css";
 import { useTranslation } from "react-i18next";
@@ -34,9 +35,9 @@ function Header(props) {
               }
             })()}
           </h1>
-          <a href="/jobs/post">
+          <Link to="/jobs/post">
             <Button className={styles.Button}>{t("Post New Job")}</Button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

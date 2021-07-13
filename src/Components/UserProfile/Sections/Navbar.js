@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../../CSS/Navbar.module.css";
 import { Navbar, Tooltip, OverlayTrigger } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { withTranslation } from "react-i18next";
 import LanguageSelector from "../../LanguageSelector/language.js";
 import { HiMicrophone } from "react-icons/hi";
@@ -16,10 +17,10 @@ function navbar({ t }) {
   return (
     <Navbar fixed="top" bg="light" expand="lg" className={styles.NavBar}>
       <Navbar.Brand className={styles.Logo}>
-        <a href="/" className={styles.Brand} style={{ fontSize: "35px" }}>
+        <Link to="/" className={styles.Brand} style={{ fontSize: "35px" }}>
           {t("Roz")}
           <span style={{ color: "#008dc8" }}>{t("gaar")} </span>
-        </a>
+        </Link>
       </Navbar.Brand>
 
       <LanguageSelector langtype={true} />

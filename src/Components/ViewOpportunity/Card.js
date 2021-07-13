@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Card, Row, Col, Container } from "react-bootstrap";
 import { BiRupee } from "react-icons/bi";
 import styles from "../../CSS/Electrician.module.css";
@@ -85,11 +86,11 @@ const OpportunityCard = (props) => {
 
             <Row>
               <Col md={0} lg={12}>
-                <a href={item.jobURL} className={styles.shiftRight}>
+                <Link to={item.jobURL} className={styles.shiftRight}>
                   <button className={styles.Button} onClick={togglePopup}>
                     {t("Apply")}
                   </button>
-                </a>
+                </Link>
                 {isOpen && (
                   <ApplyJob handleClose={togglePopup} jobId={item._id} />
                 )}
