@@ -57,7 +57,7 @@ class UserProfileForm extends Component {
     console.log(newUser);
 
     axios
-      .post("http://localhost:3030/user/register", {
+      .post("https://pacific-taiga-02637.herokuapp.com/user/register", {
         username: this.state.username,
         phoneNumber: this.state.phoneNumber,
         aadharNumber: this.state.aadharNumber,
@@ -67,7 +67,7 @@ class UserProfileForm extends Component {
         currentLocation: this.state.currentLocation,
         availability: this.state.availability,
         messageForRecruiter: this.state.messageForRecruiter,
-      })  
+      })
       .then((response) => {
         console.log("SUBMITTTING USER PROFILE", response);
         const data = response.data;
