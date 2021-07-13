@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 import axios from "axios";
 import styles from "../../CSS/ApplyJob.module.css";
@@ -68,8 +69,8 @@ class ApplyJob extends Component {
           </span>
           <p>
             {" "}
-            {t("If you haven't registered yet, please")}
-            <a href="/user/register"> {t("register")} </a>
+            {t("If you haven't registered yet, please ")}
+            <Link to={"/user/register"}>{t("register")} </Link>
             {t("before applying.")}
           </p>
           <Form onSubmit={this.handleSubmit}>
@@ -83,7 +84,7 @@ class ApplyJob extends Component {
               />
             </Form.Group>
             <Button className={styles.Button} type="submit">
-            {t("Submit")}
+              {t("Submit")}
             </Button>
           </Form>
         </div>

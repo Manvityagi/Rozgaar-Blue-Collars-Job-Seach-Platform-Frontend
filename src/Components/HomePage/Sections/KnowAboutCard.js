@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import styles from "../../../CSS/KnowAboutCard.module.css";
 import { useTranslation } from "react-i18next";
 
@@ -20,12 +21,12 @@ const KnowAbout = (props) => {
               {props.knowAbout.name}
             </Card.Title>
           </div>
-          <a href={props.knowAbout.jobLink} className={styles.Links}>
+          <Link to={props.knowAbout.jobLink} className={styles.Links}>
             {t("View Jobs")}
-          </a>
-          <a href={props.knowAbout.candLink} className={styles.Links}>
+          </Link>
+          <Link to={props.knowAbout.candLink} className={styles.Links}>
             {t("View Candidates")}
-          </a>
+          </Link>
         </Card.Body>
       </Card>
     </div>

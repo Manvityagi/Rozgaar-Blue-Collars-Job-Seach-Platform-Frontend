@@ -1,6 +1,12 @@
 import React from "react";
 import styles from "../../../CSS/Navbar.module.css";
-import { Navbar, Nav, NavDropdown, Tooltip, OverlayTrigger } from "react-bootstrap";
+import {
+  Navbar,
+  Nav,
+  NavDropdown,
+  Tooltip,
+  OverlayTrigger,
+} from "react-bootstrap";
 import { HiMicrophone } from "react-icons/hi";
 import SpeechRecognition from "react-speech-recognition";
 // import { AiOutlineSearch } from "react-icons/ai"
@@ -45,7 +51,10 @@ const navbar = ({ t }) => {
             <NavDropdown.Item href="/candidates/cooking">
               {t("Cook")}{" "}
             </NavDropdown.Item>
-            <NavDropdown.Item href="/candidates/peon"> {t("Peon")} </NavDropdown.Item>
+            <NavDropdown.Item href="/candidates/peon">
+              {" "}
+              {t("Peon")}{" "}
+            </NavDropdown.Item>
             <NavDropdown.Item href="/candidates/driver">
               {" "}
               {t("Driver")}{" "}

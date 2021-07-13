@@ -2,6 +2,8 @@ import React from "react";
 import styles from "../../../CSS/Navbar.module.css";
 import { Navbar, Nav, Button, Tooltip, OverlayTrigger } from "react-bootstrap";
 import { Link } from "react-scroll";
+import { Link as RouteLink } from "react-router-dom";
+
 import LanguageSelector from "../../LanguageSelector/language.js";
 import { withTranslation } from "react-i18next";
 import { HiMicrophone } from "react-icons/hi";
@@ -17,10 +19,10 @@ const navbar = ({ t }) => {
   return (
     <Navbar fixed="top" bg="light" expand="lg" className={styles.NavBar}>
       <Navbar.Brand className={styles.Logo}>
-        <a href="/" className={styles.Brand} style={{ fontSize: "35px" }}>
+        <RouteLink to="/" className={styles.Brand} style={{ fontSize: "35px" }}>
           Roz
           <span style={{ color: "#008dc8" }}>gaar </span>
-        </a>
+        </RouteLink>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
@@ -38,7 +40,7 @@ const navbar = ({ t }) => {
             {t("Contact Us")}
           </Link>
         </Nav>
-        <a href="/user/register">{t("Register")}</a>
+        <RouteLink to="/user/register">{t("Register")}</RouteLink>
       </Navbar.Collapse>
       <LanguageSelector langtype={false} />
       <OverlayTrigger

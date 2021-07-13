@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Jumbotron, Row, Col, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Logo from "../../Assets/logo.PNG";
 import styles from "../../CSS/Footer.module.css";
 import {
@@ -106,18 +107,18 @@ function Footer() {
             </p>
           </Col>
           <Col className={styles.SocialLinks}>
-            <a href="https://www.linkedin.com/" className={styles.Shift}>
+            <Link to="https://www.linkedin.com/" className={styles.Shift}>
               {" "}
               <FaLinkedinIn />{" "}
-            </a>
-            <a href="https://www.instagram.com/" className={styles.Shift}>
+            </Link>
+            <Link to="https://www.instagram.com/" className={styles.Shift}>
               {" "}
               <FaInstagram />{" "}
-            </a>
-            <a href="https://twitter.com/" className={styles.Shift}>
+            </Link>
+            <Link to="https://twitter.com/" className={styles.Shift}>
               {" "}
               <FaTwitter />{" "}
-            </a>
+            </Link>
           </Col>
         </Row>
         <Row className={styles.Bottom2}>
@@ -130,18 +131,18 @@ function Footer() {
         </Row>
         <Row className={styles.Bottom2}>
           <Col className={styles.SocialLinks}>
-            <a href="https://www.linkedin.com/" className={styles.Shift}>
+            <Link to="https://www.linkedin.com/" className={styles.Shift}>
               {" "}
               <FaLinkedinIn />{" "}
-            </a>
-            <a href="https://www.instagram.com/" className={styles.Shift}>
+            </Link>
+            <Link to="https://www.instagram.com/" className={styles.Shift}>
               {" "}
               <FaInstagram />{" "}
-            </a>
-            <a href="https://twitter.com/" className={styles.Shift}>
+            </Link>
+            <Link to="https://twitter.com/" className={styles.Shift}>
               {" "}
               <FaTwitter />{" "}
-            </a>
+            </Link>
           </Col>
         </Row>
       </Container>

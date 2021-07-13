@@ -1,6 +1,14 @@
 import React from "react";
 import styles from "../../../CSS/Navbar.module.css";
-import { Navbar, Nav, NavDropdown, Tooltip, OverlayTrigger } from "react-bootstrap";
+import {
+  Navbar,
+  Nav,
+  NavLink,
+  NavDropdown,
+  Tooltip,
+  OverlayTrigger,
+} from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { HiMicrophone } from "react-icons/hi";
 import SpeechRecognition from "react-speech-recognition";
 // import { AiOutlineSearch } from "react-icons/ai"
@@ -17,10 +25,10 @@ const navbar = ({ t }) => {
   return (
     <Navbar fixed="top" bg="light" expand="lg" className={styles.NavBar}>
       <Navbar.Brand className={styles.Logo}>
-        <a href="/" className={styles.Brand} style={{ fontSize: "35px" }}>
+        <Link to="/" className={styles.Brand} style={{ fontSize: "35px" }}>
           {t("Roz")}
           <span style={{ color: "#008dc8" }}>{t("gaar")} </span>
-        </a>
+        </Link>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav" className={styles.ShiftRight}>
@@ -42,9 +50,11 @@ const navbar = ({ t }) => {
             id="dropdown-basic-button"
             className={styles.Dropdown}
           >
-            <NavDropdown.Item href="/jobs/electrician">
-              {" "}
-              {t("Electrician")}{" "}
+            {/* Vaishali - change all these links like 1st one */}
+            <NavDropdown.Item>
+              <Nav.Link as={Link} to="/jobs/electrician">
+                {t("Electrician")}{" "}
+              </Nav.Link>{" "}
             </NavDropdown.Item>
             <NavDropdown.Item href="/jobs/plumber">
               {" "}

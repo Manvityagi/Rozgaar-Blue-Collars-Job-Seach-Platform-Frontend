@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 // import KnowAboutCard from "./KnowAboutCard";
 import KnowAboutData from "./KnowAboutData";
+import { Link } from "react-router-dom";
+
 import { Col, Container, Jumbotron, Row } from "react-bootstrap";
 import styles from "../../../CSS/KnowAbout.module.css";
 import { withTranslation } from "react-i18next";
@@ -45,13 +47,13 @@ class KnowAbout extends Component {
                       {t("Electrician")}
                     </Card.Title>
                   </div>
-                  <a href="/jobs/electrician" className={styles.Links}>
+                  <Link to="/jobs/electrician" className={styles.Links}>
                     {t("View Jobs")}
-                  </a>
+                  </Link>
                   <br />
-                  <a href="candidates/electrician" className={styles.Links}>
+                  <Link to="candidates/electrician" className={styles.Links}>
                     {t("View Candidates")}
-                  </a>
+                  </Link>
                 </Card.Body>
               </Card>
             </Col>
@@ -69,13 +71,13 @@ class KnowAbout extends Component {
                       {t("Plumber")}
                     </Card.Title>
                   </div>
-                  <a href="/jobs/plumber" className={styles.Links}>
+                  <Link to="/jobs/plumber" className={styles.Links}>
                     {t("View Jobs")}
-                  </a>
+                  </Link>
                   <br />
-                  <a href="candidates/plumber" className={styles.Links}>
+                  <Link to="candidates/plumber" className={styles.Links}>
                     {t("View Candidates")}
-                  </a>
+                  </Link>
                 </Card.Body>
               </Card>
             </Col>
@@ -93,13 +95,13 @@ class KnowAbout extends Component {
                       {t("Mechanic")}
                     </Card.Title>
                   </div>
-                  <a href="/jobs/mechanic" className={styles.Links}>
+                  <Link to="/jobs/mechanic" className={styles.Links}>
                     {t("View Jobs")}
-                  </a>
+                  </Link>
                   <br />
-                  <a href="candidates/mechanic" className={styles.Links}>
+                  <Link to="candidates/mechanic" className={styles.Links}>
                     {t("View Candidates")}
-                  </a>
+                  </Link>
                 </Card.Body>
               </Card>
             </Col>
@@ -122,13 +124,13 @@ class KnowAbout extends Component {
                       {t("Cook")}
                     </Card.Title>
                   </div>
-                  <a href="/jobs/cooking" className={styles.Links}>
+                  <Link to="/jobs/cooking" className={styles.Links}>
                     {t("View Jobs")}
-                  </a>
+                  </Link>
                   <br />
-                  <a href="candidates/cooking" className={styles.Links}>
+                  <Link to="candidates/cooking" className={styles.Links}>
                     {t("View Candidates")}
-                  </a>
+                  </Link>
                 </Card.Body>
               </Card>
             </Col>
@@ -146,13 +148,13 @@ class KnowAbout extends Component {
                       {t("Peon")}
                     </Card.Title>
                   </div>
-                  <a href="/jobs/peon" className={styles.Links}>
+                  <Link to="/jobs/peon" className={styles.Links}>
                     {t("View Jobs")}
-                  </a>
+                  </Link>
                   <br />
-                  <a href="candidates/peon" className={styles.Links}>
+                  <Link to="candidates/peon" className={styles.Links}>
                     {t("View Candidates")}
-                  </a>
+                  </Link>
                 </Card.Body>
               </Card>
             </Col>
@@ -170,13 +172,13 @@ class KnowAbout extends Component {
                       {t("Driver")}
                     </Card.Title>
                   </div>
-                  <a href="/jobs/driver" className={styles.Links}>
+                  <Link to="/jobs/driver" className={styles.Links}>
                     {t("View Jobs")}
-                  </a>
+                  </Link>
                   <br />
-                  <a href="candidates/driver" className={styles.Links}>
+                  <Link to="candidates/driver" className={styles.Links}>
                     {t("View Candidates")}
-                  </a>
+                  </Link>
                 </Card.Body>
               </Card>
             </Col>
@@ -199,13 +201,13 @@ class KnowAbout extends Component {
                       {t("House Keeping")}
                     </Card.Title>
                   </div>
-                  <a href="/jobs/housekeeping" className={styles.Links}>
+                  <Link to="/jobs/housekeeping" className={styles.Links}>
                     {t("View Jobs")}
-                  </a>
+                  </Link>
                   <br />
-                  <a href="/candidates/housekeeping" className={styles.Links}>
+                  <Link to="/candidates/housekeeping" className={styles.Links}>
                     {t("View Candidates")}
-                  </a>
+                  </Link>
                 </Card.Body>
               </Card>
             </Col>
@@ -223,13 +225,13 @@ class KnowAbout extends Component {
                       {t("Construction Site Workers")}
                     </Card.Title>
                   </div>
-                  <a href="/jobs/siteworkers" className={styles.Links}>
+                  <Link to="/jobs/siteworkers" className={styles.Links}>
                     {t("View Jobs")}
-                  </a>
+                  </Link>
                   <br />
-                  <a href="candidates/siteworkers" className={styles.Links}>
+                  <Link to="candidates/siteworkers" className={styles.Links}>
                     {t("View Candidates")}
-                  </a>
+                  </Link>
                 </Card.Body>
               </Card>
             </Col>
@@ -247,13 +249,13 @@ class KnowAbout extends Component {
                       {t("Security Guard")}
                     </Card.Title>
                   </div>
-                  <a href="/jobs/securityguard" className={styles.Links}>
+                  <Link to="/jobs/securityguard" className={styles.Links}>
                     {t("View Jobs")}
-                  </a>
+                  </Link>
                   <br />
-                  <a href="candidates/securityguard" className={styles.Links}>
+                  <Link to="candidates/securityguard" className={styles.Links}>
                     {t("View Candidates")}
-                  </a>
+                  </Link>
                 </Card.Body>
               </Card>
             </Col>{" "}

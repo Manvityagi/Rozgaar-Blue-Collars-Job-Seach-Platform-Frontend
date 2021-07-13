@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../../../CSS/Banner.module.css";
 import { Container, Row, Col, Jumbotron, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import BannerImage from "../../../Assets/banner.svg";
 import { withTranslation } from "react-i18next";
 
@@ -27,7 +28,7 @@ function Banner({ t }) {
                 <p className={styles.SubHeading}>{t("Employer")}</p>
                 <p style={{ textAlign: "justify" }}>
                   <a href="#categories">{t("See available candidates")}</a>{" "}
-                  {t("or")} <a href="/jobs/post">{t("Post New Job")}</a>{" "}
+                  {t("or")} <Link to="/jobs/post">{t("Post New Job")}</Link>{" "}
                   {t("if you don't find any")}
                   {t("suitable candidates")}
                 </p>
@@ -35,16 +36,16 @@ function Banner({ t }) {
               <Col>
                 <p className={styles.SubHeading}>{t("Job Seeker")}</p>
                 <p style={{ textAlign: "justify" }}>
-                  <a href="/user/register">{t("Register")}</a>{" "}
+                  <Link to="/user/register">{t("Register")}</Link>{" "}
                   {t("your profile and get hired or manually")}{" "}
                   <a href="#categories"> {t("apply")}</a> {t("to jobs.")}
                 </p>
               </Col>
             </Row>
 
-            <a href="#categories">
+            <Link to="#categories">
               <button className={styles.Button}>{t("Explore")}</button>
-            </a>
+            </Link>
           </Col>
           <Col md={6} lg={6} className={styles.rightCol}>
             <Image
