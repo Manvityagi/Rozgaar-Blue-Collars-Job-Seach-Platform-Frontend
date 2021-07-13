@@ -36,6 +36,15 @@ const OpportunityCard = (props) => {
   } else if(itemTitle == "Raj Garages") {
     itemTitle = t("Raj Garages");
     itemLocation = t("New Delhi");
+  } else if(itemTitle == "Harman Electronics" || itemTitle == "हरमन इलेक्ट्रॉनिक्स" || itemTitle == "হারমান ইলেকট্রনিক্স" || itemTitle == "హర్మాన్ ఎలక్ట్రానిక్స్") {
+    itemTitle = t("Harman Electronics");
+    itemLocation = t("New Delhi");
+  } else if(itemTitle == "Ryan Public School" || itemTitle == "रयान पब्लिक स्कूल" || itemTitle == "রায়ান পাবলিক স্কুল" || itemTitle == "रायन पब्लिक स्कूल" || itemTitle == "ర్యాన్ పబ్లిక్ స్కూల్") {
+    itemTitle = t("Ryan Public School");
+    itemLocation = t("New Delhi");
+  } else if(itemTitle == "Siraj Cars" || itemTitle == "सिराज कार्स" || itemTitle == "সিরাজ গাড়ি" || itemTitle == "సిరాజ్ కార్స్") {
+    itemTitle = t("Siraj Cars");
+    itemLocation = t("New Delhi");
   }
 
   return (

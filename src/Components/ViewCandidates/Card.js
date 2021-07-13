@@ -36,7 +36,11 @@ function CandidateCard(props) {
     itemUsername = t("Ramkishna");
     itemMessage = t("I've worked with Shiv Automobiles for an year");
     itemLocation = t("New Delhi");
-  }
+  } else if(itemUsername == "Harish Kumar" || itemUsername == "हरीश कुमार" || itemUsername == "হরিশ কুমার" || itemUsername == "హరీష్ కుమార్") {
+    itemUsername = t("Harish Kumar");
+    itemMessage = t("I am very hard working");
+    itemLocation = t("New Delhi");
+  } 
 
   return (
     <div id="fulltime" className={styles.Box}>
