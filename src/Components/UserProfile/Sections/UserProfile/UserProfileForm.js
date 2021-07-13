@@ -31,20 +31,45 @@ class UserProfileForm extends Component {
     event.preventDefault();
     // console.log("From handleSubmit", this.state.category);
 
+    let englishCategory = "OTHERS";
+    if (this.state.category === "बिजली कारीगर") englishCategory = "ELECTRICIAN";
+    else if (this.state.category === "बिजली कारीगर")
+      englishCategory = "ELECTRICIAN";
+    else if (this.state.category === "नलकार") englishCategory = "PLUMBER";
+    else if (this.state.category === "क्रियाविधि") englishCategory = "MECHANIC";
+    else if (this.state.category === "बावरची") englishCategory = "COOK";
+    else if (this.state.category === "चपरासी") englishCategory = "PEON";
+    else if (this.state.category === "चालक") englishCategory = "DRIVER";
+    else if (this.state.category === "नौकरानी") englishCategory = "MAID";
+    else if (this.state.category === "श्रम") englishCategory = "LABOUR";
+
+    let newUser = {
+      username: this.state.username,
+      phoneNumber: this.state.phoneNumber,
+      aadharNumber: this.state.aadharNumber,
+      category: englishCategory,
+      YOE: this.state.YOE,
+      otherSkills: this.state.otherSkills,
+      currentLocation: this.state.currentLocation,
+      availability: this.state.availability,
+      messageForRecruiter: this.state.messageForRecruiter,
+    };
+    console.log(newUser);
+
     axios
-      .post("https://pacific-taiga-02637.herokuapp.com/user/register", {
+      .post("http://localhost:3030/user/register", {
         username: this.state.username,
         phoneNumber: this.state.phoneNumber,
         aadharNumber: this.state.aadharNumber,
-        category: this.state.category,
+        category: englishCategory,
         YOE: this.state.YOE,
         otherSkills: this.state.otherSkills,
         currentLocation: this.state.currentLocation,
         availability: this.state.availability,
         messageForRecruiter: this.state.messageForRecruiter,
-      })
+      })  
       .then((response) => {
-        console.log(response);
+        console.log("SUBMITTTING USER PROFILE", response);
         const data = response.data;
         this.setState({ data });
         alert("Your profile is now visible to Recruiters");
@@ -66,9 +91,9 @@ class UserProfileForm extends Component {
       messageForRecruiter: "",
     });
 
-    setTimeout(() => {
-      window.location.href = "/";
-    }, 1000);
+    // setTimeout(() => {
+    //   window.location.href = "/";
+    // }, 1000);
   };
 
   render() {

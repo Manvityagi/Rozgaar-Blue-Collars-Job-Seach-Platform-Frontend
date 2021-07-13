@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../../../CSS/Navbar.module.css";
-import { Navbar, Nav, Button, Tooltip, OverlayTrigger } from "react-bootstrap";
+import { Navbar, Nav, Tooltip, OverlayTrigger } from "react-bootstrap";
 import { Link } from "react-scroll";
 import { Link as RouteLink } from "react-router-dom";
 

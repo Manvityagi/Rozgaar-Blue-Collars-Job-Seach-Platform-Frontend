@@ -1,26 +1,28 @@
-import React, { Suspense,useState } from "react";
+import React, { Suspense, useState } from "react";
 
 import UserProfile from "./Components/UserProfile/Sections/UserProfile/UserProfile";
 
 import HomePage from "./Components/HomePage/HomePage";
-import pages from "./Components/VoiceRecognition/Pages"
-import urls from "./Components/VoiceRecognition/Urls"
+import pages from "./Components/VoiceRecognition/Pages";
+import urls from "./Components/VoiceRecognition/Urls";
 import PostJob from "./Components/PostOpportunity/Sections/PostJob/PostJob";
 
 import Footer from "./Components/Footer/Footer";
-import { BrowserRouter as Router, Route, Link, Redirect, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import { Opportunity } from "./Components/ViewOpportunity/Opportunity";
 import { Candidate } from "./Components/ViewCandidates/Candidate";
-import SpeechRecognition, {useSpeechRecognition} from "react-speech-recognition";
+import SpeechRecognition, {
+  useSpeechRecognition,
+} from "react-speech-recognition";
 
 function App() {
   const commands = [
     {
-      command: ["go to * page","open * page","view *","*"],
-      callback: redirectPage => setRedirectUrl(redirectPage)
-    }
+      command: ["go to * page", "open * page", "view *", "*"],
+      callback: (redirectPage) => setRedirectUrl(redirectPage),
+    },
   ];
-  const { transcript } = useSpeechRecognition({ commands });
+  // const { transcript } = useSpeechRecognition({ commands });
   const [redirectUrl, setRedirectUrl] = useState("");
 
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
@@ -29,10 +31,9 @@ function App() {
 
   let redirect = "";
 
-  if(redirectUrl){
+  if (redirectUrl) {
     if (pages.includes(redirectUrl)) {
       redirect = <Redirect to={urls[redirectUrl]} />;
-
     } else {
       redirect = <p>Could not find page: {redirectUrl}</p>;
     }
@@ -45,7 +46,7 @@ function App() {
           <Route
             exact
             path="/"
-            render={props => (
+            render={(props) => (
               <div>
                 <HomePage />
               </div>
@@ -54,7 +55,7 @@ function App() {
           <Route
             exact
             path="/user/register"
-            render={props => (
+            render={(props) => (
               <div>
                 <UserProfile />
               </div>
@@ -63,7 +64,7 @@ function App() {
           <Route
             exact
             path="/jobs/electrician"
-            render={props => (
+            render={(props) => (
               <div>
                 <Opportunity category="ELECTRICIAN" />
               </div>
@@ -72,7 +73,7 @@ function App() {
           <Route
             exact
             path="/jobs/plumber"
-            render={props => (
+            render={(props) => (
               <div>
                 {/****************    Passing category as props *******************/}
                 <Opportunity category="PLUMBER" />
@@ -82,7 +83,7 @@ function App() {
           <Route
             exact
             path="/jobs/mechanic"
-            render={props => (
+            render={(props) => (
               <div>
                 <Opportunity category="MECHANIC" />
               </div>
@@ -91,7 +92,7 @@ function App() {
           <Route
             exact
             path="/jobs/cooking"
-            render={props => (
+            render={(props) => (
               <div>
                 <Opportunity category="COOK" />
               </div>
@@ -100,7 +101,7 @@ function App() {
           <Route
             exact
             path="/jobs/peon"
-            render={props => (
+            render={(props) => (
               <div>
                 <Opportunity category="PEON" />
               </div>
@@ -109,7 +110,7 @@ function App() {
           <Route
             exact
             path="/jobs/driver"
-            render={props => (
+            render={(props) => (
               <div>
                 <Opportunity category="DRIVER" />
               </div>
@@ -118,7 +119,7 @@ function App() {
           <Route
             exact
             path="/jobs/housekeeping"
-            render={props => (
+            render={(props) => (
               <div>
                 <Opportunity category="MAID" />
               </div>
@@ -127,7 +128,7 @@ function App() {
           <Route
             exact
             path="/jobs/siteworkers"
-            render={props => (
+            render={(props) => (
               <div>
                 <Opportunity category="LABOUR" />
               </div>
@@ -136,7 +137,7 @@ function App() {
           <Route
             exact
             path="/jobs/securityguard"
-            render={props => (
+            render={(props) => (
               <div>
                 <Opportunity category="SECURITY GUARD" />
               </div>
@@ -145,7 +146,7 @@ function App() {
           <Route
             exact
             path="/jobs/post"
-            render={props => (
+            render={(props) => (
               <div>
                 <PostJob />
               </div>
@@ -154,7 +155,7 @@ function App() {
           <Route
             exact
             path="/candidates/electrician"
-            render={props => (
+            render={(props) => (
               <div>
                 <Candidate category="ELECTRICIAN" />
               </div>
@@ -163,7 +164,7 @@ function App() {
           <Route
             exact
             path="/candidates/plumber"
-            render={props => (
+            render={(props) => (
               <div>
                 <Candidate category="PLUMBER" />
               </div>
@@ -172,7 +173,7 @@ function App() {
           <Route
             exact
             path="/candidates/mechanic"
-            render={props => (
+            render={(props) => (
               <div>
                 <Candidate category="MECHANIC" />
               </div>
@@ -181,7 +182,7 @@ function App() {
           <Route
             exact
             path="/candidates/cooking"
-            render={props => (
+            render={(props) => (
               <div>
                 <Candidate category="COOK" />
               </div>
@@ -190,7 +191,7 @@ function App() {
           <Route
             exact
             path="/candidates/peon"
-            render={props => (
+            render={(props) => (
               <div>
                 <Candidate category="PEON" />
               </div>
@@ -199,7 +200,7 @@ function App() {
           <Route
             exact
             path="/candidates/driver"
-            render={props => (
+            render={(props) => (
               <div>
                 <Candidate category="DRIVER" />
               </div>
@@ -208,7 +209,7 @@ function App() {
           <Route
             exact
             path="/candidates/housekeeping"
-            render={props => (
+            render={(props) => (
               <div>
                 <Candidate category="MAID" />
               </div>
@@ -217,7 +218,7 @@ function App() {
           <Route
             exact
             path="/candidates/siteworkers"
-            render={props => (
+            render={(props) => (
               <div>
                 <Candidate category="LABOUR" />
               </div>
@@ -226,7 +227,7 @@ function App() {
           <Route
             exact
             path="/candidates/securityguard"
-            render={props => (
+            render={(props) => (
               <div>
                 <Candidate category="SECURITY GUARD" />
               </div>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import EmployerCard from "./EmployerCard";
+// import EmployerCard from "./EmployerCard";
 import EmployerData from "./EmployerData";
 import { Container, Jumbotron, Row } from "react-bootstrap";
 import styles from "../../../CSS/Procedure.module.css";

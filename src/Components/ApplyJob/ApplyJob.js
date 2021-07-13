@@ -39,17 +39,17 @@ class ApplyJob extends Component {
           //   console.log(data);
           this.setState({ data });
           alert(`Your application has been sent.`);
-          setTimeout(() => {
-            window.location.href = "/";
-          }, 2000);
+          // setTimeout(() => {
+          //   window.location.href = "/";
+          // }, 2000);
         }
       })
       .catch((error) => {
         alert(`Please register before applying!`);
         console.log(error);
-        setTimeout(() => {
-          window.location.href = "/user/register";
-        }, 2000);
+        // setTimeout(() => {
+        //   window.location.href = "/user/register";
+        // }, 2000);
       });
 
     this.setState({

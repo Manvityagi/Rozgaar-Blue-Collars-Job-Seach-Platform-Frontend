@@ -1,17 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import styles from "../../CSS/Navbar.module.css";
-import { NavDropdown, Dropdown, DropdownButton } from "react-bootstrap";
-import { lang } from "moment";
+import { NavDropdown } from "react-bootstrap";
 
 const LanguageSelector = (props) => {
   const { i18n } = useTranslation();
-
-  const [language, setLanguage] = useState("en");
-
   const changeLanguage = (event) => {
-    // console.log(event);
-    setLanguage(event);
     i18n.changeLanguage(event);
   };
 

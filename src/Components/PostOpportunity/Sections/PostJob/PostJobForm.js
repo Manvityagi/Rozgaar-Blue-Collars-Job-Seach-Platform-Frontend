@@ -29,15 +29,25 @@ class PostJobForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const role = this.state.category;
+    // const role = this.state.category;
     // console.log("From handleSubmit", this.state.category);
-
+    let englishCategory = "OTHERS";
+    if (this.state.category === "बिजली कारीगर") englishCategory = "ELECTRICIAN";
+    else if (this.state.category === "बिजली कारीगर")
+      englishCategory = "ELECTRICIAN";
+    else if (this.state.category === "नलकार") englishCategory = "PLUMBER";
+    else if (this.state.category === "क्रियाविधि") englishCategory = "MECHANIC";
+    else if (this.state.category === "बावरची") englishCategory = "COOK";
+    else if (this.state.category === "चपरासी") englishCategory = "PEON";
+    else if (this.state.category === "चालक") englishCategory = "DRIVER";
+    else if (this.state.category === "नौकरानी") englishCategory = "MAID";
+    else if (this.state.category === "श्रम") englishCategory = "LABOUR";
     axios
       .post("https://pacific-taiga-02637.herokuapp.com/jobs", {
         title: this.state.title,
         recruiterEmailId: this.state.recruiterEmailId,
         recruiterPhoneNumber: this.state.recruiterPhoneNumber,
-        category: this.state.category,
+        category: englishCategory,
         description: this.state.description,
         location: this.state.location,
         offeredSalary: this.state.offeredSalary,
@@ -65,9 +75,9 @@ class PostJobForm extends Component {
       numberOfPositions: "",
     });
 
-    setTimeout(() => {
-      window.location.href = `/jobs/${role.toLowerCase()}`;
-    }, 1000);
+    // setTimeout(() => {
+    //   window.location.href = `/jobs/${role.toLowerCase()}`;
+    // }, 1000);
   };
 
   render() {
