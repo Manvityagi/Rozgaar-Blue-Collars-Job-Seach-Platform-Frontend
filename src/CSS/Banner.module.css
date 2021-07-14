@@ -54,6 +54,10 @@
   padding-left: 35px;
 }
 
+.Button:focus {
+  outline: none;
+}
+
 .BannerImage {
   margin-top: -10%;
   height: 600px;

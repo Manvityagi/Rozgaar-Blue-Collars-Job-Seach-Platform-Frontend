@@ -22,9 +22,21 @@ class UserProfileForm extends Component {
 
   handleChange = (event) => {
     let itemValue = event.target.value;
+    let itemName = event.target.name;
     this.setState({
       [event.target.name]: itemValue,
     });
+
+    if(itemName == "phoneNumber" && itemValue.length < 10) {
+      document.getElementById('phoneNumber').style.display = "block";
+    } else {
+      document.getElementById('phoneNumber').style.display = "none";
+    }
+    if(itemName == "aadharNumber" && itemValue.length < 12) {
+      document.getElementById('aadharNumber').style.display = "block";
+    } else {
+      document.getElementById('aadharNumber').style.display = "none";
+    }
   };
 
   handleSubmit = (event) => {
@@ -33,8 +45,6 @@ class UserProfileForm extends Component {
 
     let englishCategory = "OTHERS";
     if (this.state.category === "बिजली कारीगर") englishCategory = "ELECTRICIAN";
-    else if (this.state.category === "बिजली कारीगर")
-      englishCategory = "ELECTRICIAN";
     else if (this.state.category === "नलकार") englishCategory = "PLUMBER";
     else if (this.state.category === "क्रियाविधि") englishCategory = "MECHANIC";
     else if (this.state.category === "बावरची") englishCategory = "COOK";
@@ -42,6 +52,8 @@ class UserProfileForm extends Component {
     else if (this.state.category === "चालक") englishCategory = "DRIVER";
     else if (this.state.category === "नौकरानी") englishCategory = "MAID";
     else if (this.state.category === "श्रम") englishCategory = "LABOUR";
+    else if (this.state.category === "सुरक्षा गार्ड") englishCategory = "SECURITY GUARD";
+    else englishCategory = this.state.category;
 
     let newUser = {
       username: this.state.username,
@@ -54,7 +66,7 @@ class UserProfileForm extends Component {
       availability: this.state.availability,
       messageForRecruiter: this.state.messageForRecruiter,
     };
-    console.log(newUser);
+    // console.log(newUser);
 
     axios
       .post("https://pacific-taiga-02637.herokuapp.com/user/register", {
@@ -73,23 +85,23 @@ class UserProfileForm extends Component {
         const data = response.data;
         this.setState({ data });
         alert("Your profile is now visible to Recruiters");
+
+        this.setState({
+          username: "",
+          phoneNumber: "",
+          aadharNumber: "",
+          category: "",
+          YOE: "",
+          otherSkills: "",
+          currentLocation: "",
+          availability: "",
+          messageForRecruiter: "",
+        });
       })
       .catch((error) => {
         console.log(error);
-        alert("Invalid Input");
+        // alert("Invalid Input");
       });
-
-    this.setState({
-      username: "",
-      phoneNumber: "",
-      aadharNumber: "",
-      category: "",
-      YOE: "",
-      otherSkills: "",
-      currentLocation: "",
-      availability: "",
-      messageForRecruiter: "",
-    });
 
     // setTimeout(() => {
     //   window.location.href = "/";
@@ -126,6 +138,7 @@ class UserProfileForm extends Component {
               placeholder={t("Username")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
+              required
             />
           </Form.Group>
 
@@ -136,10 +149,13 @@ class UserProfileForm extends Component {
               name="phoneNumber"
               value={phoneNumber}
               placeholder={t("Phone Number")}
+              maxLength="10"
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
+              required
             />
           </Form.Group>
+          <p id="phoneNumber" className={styles.ErrorMessage}>* Enter a 10 digit number</p>
 
           <Form.Group>
             <Form.Control
@@ -148,10 +164,13 @@ class UserProfileForm extends Component {
               name="aadharNumber"
               value={aadharNumber}
               placeholder={t("Aadhar Number")}
+              maxLength="12"
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
+              required
             />
           </Form.Group>
+          <p id="aadharNumber" className={styles.ErrorMessage}>* Enter a 12 digit number</p>
 
           <Form.Group>
             <Form.Control
@@ -162,6 +181,7 @@ class UserProfileForm extends Component {
               defaultValue="Choose Category"
               style={{ marginTop: "30px", marginLeft: "40px" }}
               onChange={this.handleChange}
+              required
             >
               <option> {t("Choose Category")} </option>
               <option> {t("ELECTRICIAN")} </option>
@@ -186,6 +206,7 @@ class UserProfileForm extends Component {
               placeholder={t("Years of Experience")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
+              required
             />
           </Form.Group>
 
@@ -210,6 +231,7 @@ class UserProfileForm extends Component {
               placeholder={t("Current Location")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
+              required
             />
           </Form.Group>
 
@@ -222,6 +244,7 @@ class UserProfileForm extends Component {
               placeholder={t("Date of Availability (YYYY/MM/DD)")}
               style={{ marginLeft: "40px", marginTop: "30px" }}
               onChange={this.handleChange}
+              required
             />
           </Form.Group>
 

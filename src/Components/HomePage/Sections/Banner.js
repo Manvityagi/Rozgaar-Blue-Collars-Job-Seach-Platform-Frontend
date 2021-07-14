@@ -43,9 +43,9 @@ function Banner({ t }) {
               </Col>
             </Row>
 
-            <Link to="#categories">
+            <a href="#categories">
               <button className={styles.Button}>{t("Explore")}</button>
-            </Link>
+            </a>
           </Col>
           <Col md={6} lg={6} className={styles.rightCol}>
             <Image

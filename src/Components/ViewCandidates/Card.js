@@ -8,6 +8,40 @@ import { useTranslation } from "react-i18next";
 function CandidateCard(props) {
   const { item } = props;
   const { t } = useTranslation();
+
+  let itemUsername = item.username,
+      itemMessage = item.messageForRecruiter,
+      itemLocation = item.currentLocation;
+  if(itemUsername == "Mankika Radhey") {
+    itemUsername = t("Mankika Radhey");
+    itemMessage = t("I am skilled at all electrical appliances");
+    itemLocation = t("New Delhi");
+  } else if(itemUsername == "Karan Malik") {
+    itemUsername = t("Karan Malik");
+    itemMessage = t("I am very hard working");
+    itemLocation = t("New Delhi");
+  } else if(itemUsername == "Jaskeerat Sukh") {
+    itemUsername = t("Jaskeerat Sukh");
+    itemMessage = t("I've 10 years of experience as a plumber");
+    itemLocation = t("New Delhi");
+  } else if(itemUsername == "Madan Kumar") {
+    itemUsername = t("Madan Kumar");
+    itemMessage = t("I've worked at a sports academy for 2 years as a plumber");
+    itemLocation = t("New Delhi");
+  } else if(itemUsername == "Vishal Singh") {
+    itemUsername = t("Vishal Singh");
+    itemMessage = t("I've previously worked at Siraj Garages");
+    itemLocation = t("New Delhi");
+  } else if(itemUsername == "Ramkishna") {
+    itemUsername = t("Ramkishna");
+    itemMessage = t("I've worked with Shiv Automobiles for an year");
+    itemLocation = t("New Delhi");
+  } else if(itemUsername == "Harish Kumar" || itemUsername == "हरीश कुमार" || itemUsername == "হরিশ কুমার" || itemUsername == "హరీష్ కుమార్") {
+    itemUsername = t("Harish Kumar");
+    itemMessage = t("I am very hard working");
+    itemLocation = t("New Delhi");
+  } 
+
   return (
     <div id="fulltime" className={styles.Box}>
       <Card style={{ width: "80rem", borderRadius: "10px" }}>
@@ -24,11 +58,11 @@ function CandidateCard(props) {
               className={styles.CardImage}
             />
             <Col>
-              <h1 className={styles.Title}>{item.username}</h1>
+              <h1 className={styles.Title}>{itemUsername}</h1>
             </Col>
           </Row>
           <Row>
-            <p className={styles.Description}>{item.messageForRecruiter}</p>
+            <p className={styles.Description}>{itemMessage}</p>
           </Row>
           <Container>
             <Row>
@@ -37,7 +71,7 @@ function CandidateCard(props) {
                   <h5 className={styles.Heading} style={{ marginLeft: "20px" }}>
                     {t("Current Location")}:
                   </h5>
-                  <h5 className={styles.Value}>{item.currentLocation}</h5>
+                  <h5 className={styles.Value}>{itemLocation}</h5>
                 </Row>
               </Col>
 
