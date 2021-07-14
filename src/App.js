@@ -234,7 +234,7 @@ function App() {
               </div>
             )}
           />
-          <p id="transcript">Transcript: {transcript}</p>
+        
           <Footer />
         </Suspense>
       </div>
