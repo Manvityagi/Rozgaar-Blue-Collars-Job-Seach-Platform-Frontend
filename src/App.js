@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useState, form } from "react";
 
 import UserProfile from "./Components/UserProfile/Sections/UserProfile/UserProfile";
 
@@ -22,7 +22,7 @@ function App() {
       callback: (redirectPage) => setRedirectUrl(redirectPage),
     },
   ];
-  // const { transcript } = useSpeechRecognition({ commands });
+   const { transcript } = useSpeechRecognition({ commands });
   const [redirectUrl, setRedirectUrl] = useState("");
 
   if (!SpeechRecognition.browserSupportsSpeechRecognition()) {
@@ -34,6 +34,7 @@ function App() {
   if (redirectUrl) {
     if (pages.includes(redirectUrl)) {
       redirect = <Redirect to={urls[redirectUrl]} />;
+      console.log(transcript);
     } else {
       redirect = <p>Could not find page: {redirectUrl}</p>;
     }
@@ -41,7 +42,7 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
+      <div>
         <Suspense fallback={null}>
           <Route
             exact
@@ -233,11 +234,13 @@ function App() {
               </div>
             )}
           />
+        
           <Footer />
         </Suspense>
       </div>
       {redirect}
     </Router>
+
   );
 }
 
