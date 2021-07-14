@@ -61,3 +61,11 @@ a:hover {
   cursor: pointer;
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
 }
+
+.ErrorMessage {
+  color: red;
+  font-size: 12px;
+  margin-left: 42px;
+  margin-top: 0px;
+  display: none;
+}
