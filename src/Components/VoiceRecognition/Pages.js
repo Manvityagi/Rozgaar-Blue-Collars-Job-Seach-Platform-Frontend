@@ -169,6 +169,7 @@ const pages = [
    "palak chahie",
   "housekeeper chahie",
   "siteworker chahie",
+  "siteworkers chahie",
   "Nirman sthal karykarta chahie",
   "Nirman Sthal karykarta chahie",
   "Surakshaguard chahie",
