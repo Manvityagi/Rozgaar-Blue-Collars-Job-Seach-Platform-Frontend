@@ -38,7 +38,11 @@ function CandidateCard(props) {
     itemLocation = t("New Delhi");
   } else if(itemUsername == "Harish Kumar" || itemUsername == "हरीश कुमार" || itemUsername == "হরিশ কুমার" || itemUsername == "హరీష్ కుమార్") {
     itemUsername = t("Harish Kumar");
-    itemMessage = t("I am very hard working");
+    // itemMessage = t("I am very hard working");
+    itemLocation = t("New Delhi");
+  } else if(itemUsername == "Manvi Tyagi" || itemUsername == "मानवी त्यागी" || itemUsername == "মানভী তায়াগি" || itemUsername == "మాన్వి త్యాగి") {
+    itemUsername = t("Manvi Tyagi");
+    // itemMessage = t("I am very hard working");
     itemLocation = t("New Delhi");
   } 
 

@@ -20,8 +20,8 @@ const navbar = ({ t }) => {
     <Navbar fixed="top" bg="light" expand="lg" className={styles.NavBar}>
       <Navbar.Brand className={styles.Logo}>
         <RouteLink to="/" className={styles.Brand} style={{ fontSize: "35px" }}>
-          Roz
-          <span style={{ color: "#008dc8" }}>gaar </span>
+          {t("Roz")}
+          <span style={{ color: "#008dc8" }}>{t("gaar")} </span>
         </RouteLink>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
