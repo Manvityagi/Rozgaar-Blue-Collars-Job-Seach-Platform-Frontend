@@ -1,5 +1,6 @@
 const pages = [
   "home",
+  "home page",
   "jobs for electrician",
   "jobs for plumber",
   "jobs for mechanic",
@@ -84,7 +85,7 @@ const pages = [
    "Palak ki Naukari chahie",
    "chalak ki Naukari chahie",
    "calak ki Naukari chahie",
-  "housekeeping ki Naukari chahie",
+  "bi ki Naukari chahie",
   "siteworkers ki Naukari chahie",
   "siteworker ki Naukari chahie",
   "Nirman sthal karykarta ki Naukari chahie",
@@ -186,7 +187,7 @@ const pages = [
    "Palak chahiye",
    "chalak chahiye",
    "palak chahiye",
-  "housekeeper chahiye",
+  "bi chahie",
   "siteworker chahiye",
   "Nirman sthal karykarta chahiye",
   "Nirman Sthal karykarta chahiye",
@@ -197,6 +198,7 @@ const pages = [
   "Bawarchi ki Naukari",
   "post jobs",
   "post job",
+  "Naukri post karni hai",
   "registration",
   "register"
 ];

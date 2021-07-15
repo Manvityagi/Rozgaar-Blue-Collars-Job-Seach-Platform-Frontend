@@ -234,7 +234,7 @@ function App() {
               </div>
             )}
           />
-        
+          {/* <p>{transcript}</p> */}
           <Footer />
         </Suspense>
       </div>
